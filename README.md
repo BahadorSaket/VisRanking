@@ -1,2 +1,2 @@
-# VisRanking
-This repository contains the code for the online study.
+# DataVisualizer
+Code for generating visualizations

@@ -1,0 +1,310 @@
+<html>
+<head>
+	<title></title>	
+	<script src="js/vendor/d3.min.js" type="text/javascript"></script>
+    <script src="js/vendor/d3.tip.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/vendor/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="css/vendor/jquery-ui.min.css">
+    <link rel="stylesheet" href="dataVisualizer.css">
+</head>
+<script type="text/javascript" src='visRenderer.js'></script>
+<script type="text/javascript" src='dataTransformer.js'></script>
+<script type="text/javascript" src='dataVisualizer.js'></script>
+<script type="text/javascript" src='DataProcessor.js'></script>
+<script type="text/javascript" src='xScaleGenerator.js'></script>
+<script type="text/javascript" src='yScaleGenerator.js'></script>
+<script type="text/javascript" src='showChart.js'></script>
+<script src="scripts/FileSaver.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+<script type="text/javascript">
+
+   var stream0 = ""; 
+   var stream1 = ""; 
+   var questionID = "";
+   var stream2 = ""; 
+   var stream3="";
+   var checkpoint = 0;
+   var x;
+   dataProcessor.processFile("data/cars.csv");
+
+
+// init
+/*
+   var mydb = new Firebase("https://intense-torch-1450.firebaseio.com/");
+   var sets = { 
+         "Retrieve":100,
+         "Filter":100,
+         "Derived":100,
+         "Range":100,
+         "Correlation":100,
+         "Extremum":100,
+         "Order":100,
+         "Cluster":100,
+         "Anomalies":100,
+         "Distribution":100
+   };
+   mydb.push(sets);
+*/
+
+
+   var sets={};
+   var set; 
+   var ref = new Firebase("https://intense-torch-1450.firebaseio.com/-KGmHniW7p_eZ4hUGKMp");
+   ref.once("value", function(snapshot) {
+      sets = snapshot.val();
+      //console.log(sets);
+   });
+   
+   setTimeout(continueExecution, 2500) //wait ten seconds before continuing
+
+   function continueExecution()
+   {
+        var max_val = -Infinity,max_label="", x;
+        for( x in sets) {
+            if( sets[x] > max_val) 
+            {
+                max_val = sets[x];
+                max_label = x;
+            }
+        }
+        set = max_label;
+        sets[max_label] = max_val-1;
+        ref.update(sets);
+    }
+  
+    //set = "Anomalies";
+
+   function saveAnswers()
+   {
+        var timestamp = new Date().getTime();
+        var mydb = new Firebase("https://intense-torch-1450.firebaseio.com/");
+        //console.log(stream0, stream1, stream2);
+        var obj = {
+                userid: Math.ceil(timestamp),
+                bio: stream0,
+                time: stream2.slice(0, -1),
+                accuracy: stream1.slice(0, -1),
+                ranking: stream3.slice(0, -1)
+        }
+        mydb.push(obj);
+   }
+
+   function showNextQ(){
+		var prevQ = parseInt($('.question').attr('id')); // get id of the submitting question 
+		var currentQ = prevQ + 1; 
+		
+		tempTime = checkpoint;
+		var date = new Date();
+		checkpoint = date.getTime(); // record the time, in milliseconds since 1970
+		
+
+		if(currentQ == 1) // going to load 1st Q, store personal details from prev page
+		{
+            var count=0;
+			// stream += $('input:text[name="firstname"]').val();
+			// stream += "," + $('input:text[name="lastname"]').val();
+			stream0 += $('input:radio[name="age"]:checked').val();
+			stream0 += "," + $('input:radio[name="sex"]:checked').val();
+			stream0 += "," + $('input:radio[name="hours"]:checked').val()+",";
+            $('input:checkbox').each(function () {
+                 if(this.checked)
+                 {
+                    if(count ==0) stream0 += $(this).val();
+                    else stream0 += "-" +$(this).val();
+
+                    count++;
+                    
+                 }
+            });
+
+            if(set == "Retrieve")
+            {
+            	$("#CONTAINER").load("Questions/Retrieve.html #" + currentQ);
+                updateChart(currentQ,set);	
+            }
+            else if(set == "Filter")
+            {
+            	$("#CONTAINER").load("Questions/Filter.html #" + currentQ);
+                updateChart(currentQ,set);	
+            }   
+            else if(set == "Derived")
+            {
+            	$("#CONTAINER").load("Questions/Derived.html #" + currentQ);
+                updateChart(currentQ,set);	
+            }  
+            else if(set == "Range")
+            {
+            	$("#CONTAINER").load("Questions/Range.html #" + currentQ);
+                updateChart(currentQ,set);	
+            }
+            else if(set == "Correlation")
+            {
+            	$("#CONTAINER").load("Questions/Correlation.html #" + currentQ);
+                updateChart(currentQ,set);	
+            }
+            else if(set == "Extremum")
+            {
+            	$("#CONTAINER").load("Questions/Extremum.html #" + currentQ);
+                updateChart(currentQ,set);	
+            }
+            else if(set == "Order")
+            {
+            	$("#CONTAINER").load("Questions/Order.html #" + currentQ);
+                updateChart(currentQ,set);	
+            }  
+            else if(set == "Cluster")
+            {
+            	$("#CONTAINER").load("Questions/Cluster.html #" + currentQ);
+                updateChart(currentQ,set);	
+            }    
+            else if(set == "Anomalies")
+            {
+            	$("#CONTAINER").load("Questions/Anomalies.html #" + currentQ);
+                updateChart(currentQ,set);	
+            }
+            else if(set == "Distribution")
+            {
+            	$("#CONTAINER").load("Questions/Distribution.html #" + currentQ);
+                updateChart(currentQ,set);	
+            }
+		}
+		if(currentQ > 1) // going to load Q2 - Qn, store Qn-1 answers
+		{
+            //console.log("#"+prevQ, $("#"+prevQ).hasClass("ranking"));
+            
+            if($("#"+prevQ).hasClass("ranking")==false)
+            {
+                stream1 += questionID + "-" + $('input:radio[name="answer"]:checked').val() + ","; // save the checked radio button
+                stream2 += questionID + "-" + parseInt( (checkpoint-tempTime)/1000 ) + ","; // convert to seconds and save
+            }
+            else
+            {
+               stream3 += questionID + ",";
+               stream3 += $("#vis1").children("p").text().toString() + "-"+ $("#vis1").children("select").val().toString() +",";
+               stream3 += $("#vis2").children("p").text().toString() + "-"+ $("#vis2").children("select").val().toString() +",";
+               stream3 += $("#vis3").children("p").text().toString() + "-"+ $("#vis3").children("select").val().toString() +",";
+               stream3 += $("#vis4").children("p").text().toString() + "-"+ $("#vis4").children("select").val().toString() +",";
+               stream3 += $("#vis5").children("p").text().toString() + "-"+ $("#vis5").children("select").val().toString() +",";
+               console.log(stream3);
+
+            }
+	
+
+			if(set == "Retrieve")
+            {
+            	$("#CONTAINER").load("Questions/Retrieve.html #" + currentQ);
+                updateChart(currentQ,set);	
+            }
+            else if(set == "Filter")
+            {
+            	$("#CONTAINER").load("Questions/Filter.html #" + currentQ);
+                updateChart(currentQ,set);	
+            }   
+            else if(set == "Derived")
+            {
+            	$("#CONTAINER").load("Questions/Derived.html #" + currentQ);
+                updateChart(currentQ,set);	
+            }  
+            else if(set == "Range")
+            {
+            	$("#CONTAINER").load("Questions/Range.html #" + currentQ);
+                updateChart(currentQ,set);	
+            }
+            else if(set == "Correlation")
+            {
+            	$("#CONTAINER").load("Questions/Correlation.html #" + currentQ);
+                updateChart(currentQ,set);	
+            }
+            else if(set == "Extremum")
+            {
+            	$("#CONTAINER").load("Questions/Extremum.html #" + currentQ);
+                updateChart(currentQ,set);	
+            }
+            else if(set == "Order")
+            {
+            	$("#CONTAINER").load("Questions/Order.html #" + currentQ);
+                updateChart(currentQ,set);	
+            }  
+            else if(set == "Cluster")
+            {
+            	$("#CONTAINER").load("Questions/Cluster.html #" + currentQ);
+                updateChart(currentQ,set);	
+            }    
+            else if(set == "Anomalies")
+            {
+            	$("#CONTAINER").load("Questions/Anomalies.html #" + currentQ);
+                updateChart(currentQ,set);	
+            }
+            else if(set == "Distribution")
+            {
+            	$("#CONTAINER").load("Questions/Distribution.html #" + currentQ);
+                updateChart(currentQ,set);	
+            }
+        }
+
+   }
+
+</script>
+
+ <body>
+
+	 
+		<div id="CONTAINER" >
+			 <div class="question" id="0"> <!-- This is considered as question 0 -->
+			    
+			
+				<h4> NOTE: To ensure best performance, we recommend you run the study in full screen mode. </h4>
+                <p>
+                The goal of this study is to measure efficiency of different types of visualizations. 
+
+                In this study, you will be asked to complete 25 tasks. For each task, a question is shown on top of the page and a visualization below that. Your task is to answer each question by getting help of the visualization. Most of the questions should be answered by selecting one of the multiple options. 
+
+
+                </p> 
+
+                <h4> <font color="red">Kindly DO NOT refresh the page during the session.</font> If you wish to restart the study, you should go to XXXXXXXXX. </h4>
+				<tr>
+				    <td width=20 style="font-weight:bold;vertical-align:text-center;"> Age: </td></br>
+				    <td>
+				        <input type="radio" name="age" value="20-25" style="margin-right: 0" checked /> 20-25 years old
+				        <input type="radio" name="age" value="25-35"  style="margin-right: 0" />    25-35 years old</br>
+					    <input type="radio" name="age" value="34-45" style="margin-right: 0" />    35-45 years old
+				        <input type="radio" name="age" value="Above 45" style="margin-right: 0" />    Above 45 years old</br>
+                    </td>
+			    </tr> </br>
+
+				<tr>
+				    <td width=20 style="font-weight:bold;vertical-align:text-center;">Sex:</td><br>
+				    <td>
+					 	<input type="radio" name="sex" value="male" style="margin-right: 0" checked /> Male 
+				     	<input type="radio" name="sex" value="female"  style="margin-right: 0" /> Female </br>
+				    </td>
+			    </tr> </br> 
+
+ 				<tr>
+				<td width=20 style="font-weight:bold;vertical-align:text-center;">Have you ever created a visualization before?</td> </br>
+				    <td>
+					    <input type="radio" name="hours" value="No" style="margin-right: 0" checked /> No 
+				        <input type="radio" name="hours" value="Yes"  style="margin-right: 0" />  Yes </br>
+				    </td>
+			    </tr></br>
+
+ 				<tr>
+			    <td width=20 style="font-weight:bold;vertical-align:text-center;"> Have you ever used any of the following tools or libraries to create a visualization? If so, which ones?  </td> </br>      
+				    <td> 
+				        <input type="checkbox" name="tool" value="Excel"> Microsoft Excel </br>
+                        <input type="checkbox" name="tool" value="Tableau"> Tableau </br>
+                        <input type="checkbox" name="tool" value="Spotfire"> Sportfire </br>
+                        <input type="checkbox" name="tool" value="D3"> D3</br>
+                        <input type="checkbox" name="tool" value="Processing"> Processing</br>
+                    </td>
+			    </tr> </br>
+                
+				<input type="submit" value="Submit and Start the Experiment" onclick="showNextQ()" />
+				
+			   
+			</div>
+		</div>
+    </body>
+</html>
