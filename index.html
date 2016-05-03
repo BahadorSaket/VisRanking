@@ -49,6 +49,8 @@
 
 
    var sets={};
+
+   var max_val, max_label;
    var set; 
    var ref = new Firebase("https://intense-torch-1450.firebaseio.com/-KGmHniW7p_eZ4hUGKMp");
    ref.once("value", function(snapshot) {
@@ -60,7 +62,9 @@
 
    function continueExecution()
    {
-        var max_val = -Infinity,max_label="", x;
+        max_val = -Infinity;
+        max_label="";
+        var x;
         for( x in sets) {
             if( sets[x] > max_val) 
             {
@@ -69,14 +73,16 @@
             }
         }
         set = max_label;
-        sets[max_label] = max_val-1;
-        ref.update(sets);
+
     }
   
     //set = "Anomalies";
 
    function saveAnswers()
    {
+        sets[max_label] = max_val-1;
+        ref.update(sets);
+        
         var timestamp = new Date().getTime();
         var mydb = new Firebase("https://intense-torch-1450.firebaseio.com/");
         //console.log(stream0, stream1, stream2);
