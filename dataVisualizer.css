@@ -54,6 +54,9 @@
     margin-right: auto;
 }
 
+#Answer{
+    color:red;
+}
 .p-center{
 
     text-align: center;

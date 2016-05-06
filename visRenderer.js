@@ -44,7 +44,7 @@ function onlyUnique(value, index, self) { // This function returns an array with
         "xs":"2px",
         "s":"4px",
         "m":"6px",
-        "l":"10px"
+        "l":"12px"
     };
     var labelFontSize = "";
     var tickFontSize = "";
@@ -194,7 +194,7 @@ function onlyUnique(value, index, self) { // This function returns an array with
             .call(xAxis)
             .append('text')
             .attr("y",margin.bottom*0.75)
-            .attr("x",width)
+            .attr("x",width*0.5)
             .attr("dy", ".71em")
             .style("text-anchor", "end")
             .style('font-size',labelFontSize)
@@ -303,21 +303,22 @@ function onlyUnique(value, index, self) { // This function returns an array with
             return "translate(" + arc.centroid(d) + ")rotate(" + angle(d) + ")";
           })
           .style("fill", "black")
-          .style("font", "8px Arial")
-          .text(function(d) { return Math.floor(d.data.value); });
+          .style("font", "bold 11px Arial")
+          .text(function(d) { return d.data.label; });
 
 
         g.append("svg:text")
            .attr("transform", function(d) { //set the label's origin to the center of the arc
             //we have to make sure to set these before calling arc.centroid
             d.outerRadius = radius + 40; // Set Outer Coordinate
-            d.innerRadius = radius + 30; // Set Inner Coordinate
-            return "translate(" + arc.centroid(d) + ")rotate(" + angle(d) + ")";
+            d.innerRadius = radius + 50; // Set Inner Coordinate
+           // return "translate(" + arc.centroid(d) + ")rotate(" + angle(d) + ")";
+            return "translate(" + arc.centroid(d) + ")";
            })
           .attr("text-anchor", "middle") //center the text on it's origin
           .style("fill", "black")
-          .style("font", "bold 10px Arial")
-          .text(function(d, i) { return d.data.label; }); 
+          .style("font", "bold 12px Arial")
+          .text(function(d, i) { return Math.floor(d.data.value); }); 
       /*
         g.append("text").attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
                         .attr("dy", ".23em")
@@ -412,7 +413,7 @@ function onlyUnique(value, index, self) { // This function returns an array with
             .call(xAxis)
             .append('text')
             .attr("y",margin.bottom*0.75)
-            .attr("x",width)
+            .attr("x",width*0.5)
             .attr("dy", ".71em")
             .style("text-anchor", "end")
             .style('font-size',labelFontSize)
@@ -490,16 +491,29 @@ function onlyUnique(value, index, self) { // This function returns an array with
             tbl  = document.createElement('table');
             tbl.style.width  = tableWidth;
             tbl.className += "Table-center";
-            tbl.style.border = '1px solid black'; 
+            tbl.style.borderTop = '0px solid black'; 
+            tbl.style.borderLeft = '0px solid black'; 
+            tbl.style.borderRight = '0px solid black'; 
 
             var tr = tbl.insertRow();
             var td = tr.insertCell();
             td.appendChild(document.createTextNode(labels.xAttr));
-            td.style.border = '0.2px solid black';
+            td.style.backgroundColor ="#bfbfbf";
+            td.style.textAlign = "center";
+            td.style.borderTop = '0px solid black'; 
+            td.style.borderLeft = '0px solid black'; 
+            td.style.borderRight = '0px solid black';
+            td.style.borderBottom = '0.2px solid black';
             
             var td = tr.insertCell();
             td.appendChild(document.createTextNode(labels.yAttr));
-            td.style.border = '0.2px solid black';
+            td.style.backgroundColor ="#bfbfbf";
+            td.style.textAlign = "center";
+            td.style.borderTop = '0px solid black'; 
+            td.style.borderLeft = '0px solid black'; 
+            td.style.borderRight = '0px solid black';
+            td.style.borderBottom = '0.2px solid black';
+
 
 
             for(var i = 0; i < data.length; i++){
@@ -515,7 +529,11 @@ function onlyUnique(value, index, self) { // This function returns an array with
                             td.appendChild(document.createTextNode(String(data[i].value.toFixed(2))));
                         }
                         
-                        td.style.border = '0.2px solid black';
+                        td.style.borderTop = '0px solid black'; 
+                        td.style.borderLeft = '0px solid black'; 
+                        td.style.borderRight = '0px solid black';
+                        td.style.borderBottom = '0.2px solid black';
+                        td.style.textAlign = "center";
                 }
             }
             $(selector).append(tbl);
@@ -594,7 +612,7 @@ function onlyUnique(value, index, self) { // This function returns an array with
             .call(xAxis)
             .append('text')
             .attr("y",margin.bottom*0.75)
-            .attr("x",width)
+            .attr("x",width*0.5)
             .attr("dy", ".71em")
             .style("text-anchor", "end")
             .style('font-size',labelFontSize)

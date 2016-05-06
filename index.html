@@ -26,9 +26,10 @@
    var stream3="";
    var checkpoint = 0;
    var x;
+
    dataProcessor.processFile("data/cars.csv");
 
-
+  
 // init
 /*
    var mydb = new Firebase("https://intense-torch-1450.firebaseio.com/");
@@ -58,8 +59,9 @@
       //console.log(sets);
    });
    
-   setTimeout(continueExecution, 2500) //wait ten seconds before continuing
+ //  setTimeout(continueExecution, 2500) //wait ten seconds before continuing
 
+/*
    function continueExecution()
    {
         max_val = -Infinity;
@@ -75,8 +77,8 @@
         set = max_label;
 
     }
+ */ 
   
-    //set = "Anomalies";
 
    function saveAnswers()
    {
@@ -85,7 +87,7 @@
         
         var timestamp = new Date().getTime();
         var mydb = new Firebase("https://intense-torch-1450.firebaseio.com/");
-        //console.log(stream0, stream1, stream2);
+       // console.log(stream0, stream1);
         var obj = {
                 userid: Math.ceil(timestamp),
                 bio: stream0,
@@ -96,20 +98,38 @@
         mydb.push(obj);
    }
 
+   set = "Order";
    function showNextQ(){
 		var prevQ = parseInt($('.question').attr('id')); // get id of the submitting question 
 		var currentQ = prevQ + 1; 
+
+        
 		
 		tempTime = checkpoint;
 		var date = new Date();
 		checkpoint = date.getTime(); // record the time, in milliseconds since 1970
 		
+        if($('input:radio[name="answer"]').length && $("#"+prevQ).hasClass("ranking")==false)
+        {
+                if(!$('input:radio[name="answer"]:checked').val())
+                { 
+                  // $(".question").css("color","red");
+                   return false;
+                }
+                else if(currentQ <= 6)
+                {
+                    if($('input:radio[name="answer"]:checked').val()=="Correct"){
+                    }
+                    else{
+                        $("#Answer").text("Your answer is wrong. Please try it again.");
+                        return false;
+                    }
+                }
+        } 
 
 		if(currentQ == 1) // going to load 1st Q, store personal details from prev page
 		{
             var count=0;
-			// stream += $('input:text[name="firstname"]').val();
-			// stream += "," + $('input:text[name="lastname"]').val();
 			stream0 += $('input:radio[name="age"]:checked').val();
 			stream0 += "," + $('input:radio[name="sex"]:checked').val();
 			stream0 += "," + $('input:radio[name="hours"]:checked').val()+",";
@@ -127,64 +147,68 @@
             if(set == "Retrieve")
             {
             	$("#CONTAINER").load("Questions/Retrieve.html #" + currentQ);
-                updateChart(currentQ,set);	
+                setTimeout(function(){ updateChart(currentQ,set); }, 500);	
             }
             else if(set == "Filter")
             {
             	$("#CONTAINER").load("Questions/Filter.html #" + currentQ);
-                updateChart(currentQ,set);	
+                setTimeout(function(){ updateChart(currentQ,set); }, 500);	
             }   
             else if(set == "Derived")
             {
             	$("#CONTAINER").load("Questions/Derived.html #" + currentQ);
-                updateChart(currentQ,set);	
+                setTimeout(function(){ updateChart(currentQ,set); }, 500);
             }  
             else if(set == "Range")
             {
             	$("#CONTAINER").load("Questions/Range.html #" + currentQ);
-                updateChart(currentQ,set);	
+                setTimeout(function(){ updateChart(currentQ,set); }, 500);
             }
             else if(set == "Correlation")
             {
             	$("#CONTAINER").load("Questions/Correlation.html #" + currentQ);
-                updateChart(currentQ,set);	
+                setTimeout(function(){ updateChart(currentQ,set); }, 500);
             }
             else if(set == "Extremum")
             {
             	$("#CONTAINER").load("Questions/Extremum.html #" + currentQ);
-                updateChart(currentQ,set);	
+
+                setTimeout(function(){ updateChart(currentQ,set); }, 500);
             }
             else if(set == "Order")
             {
+
             	$("#CONTAINER").load("Questions/Order.html #" + currentQ);
-                updateChart(currentQ,set);	
+                setTimeout(function(){ updateChart(currentQ,set); }, 500);   
             }  
             else if(set == "Cluster")
             {
             	$("#CONTAINER").load("Questions/Cluster.html #" + currentQ);
-                updateChart(currentQ,set);	
+                setTimeout(function(){ updateChart(currentQ,set); }, 500);
             }    
             else if(set == "Anomalies")
             {
             	$("#CONTAINER").load("Questions/Anomalies.html #" + currentQ);
-                updateChart(currentQ,set);	
+                setTimeout(function(){ updateChart(currentQ,set); }, 500);
             }
             else if(set == "Distribution")
             {
             	$("#CONTAINER").load("Questions/Distribution.html #" + currentQ);
-                updateChart(currentQ,set);	
+                setTimeout(function(){ updateChart(currentQ,set); }, 500);
             }
 		}
 		if(currentQ > 1) // going to load Q2 - Qn, store Qn-1 answers
 		{
             //console.log("#"+prevQ, $("#"+prevQ).hasClass("ranking"));
             
-            if($("#"+prevQ).hasClass("ranking")==false)
+
+            if($("#"+prevQ).hasClass("ranking")==false && prevQ > 7)
             {
                 stream1 += questionID + "-" + $('input:radio[name="answer"]:checked').val() + ","; // save the checked radio button
                 stream2 += questionID + "-" + parseInt( (checkpoint-tempTime)/1000 ) + ","; // convert to seconds and save
+                console.log(stream1);
             }
-            else
+            else if($("#"+prevQ).hasClass("ranking")==true)
             {
                stream3 += questionID + ",";
                stream3 += $("#vis1").children("p").text().toString() + "-"+ $("#vis1").children("select").val().toString() +",";
@@ -192,60 +216,62 @@
                stream3 += $("#vis3").children("p").text().toString() + "-"+ $("#vis3").children("select").val().toString() +",";
                stream3 += $("#vis4").children("p").text().toString() + "-"+ $("#vis4").children("select").val().toString() +",";
                stream3 += $("#vis5").children("p").text().toString() + "-"+ $("#vis5").children("select").val().toString() +",";
-               console.log(stream3);
+               //console.log(stream3);
 
             }
 	
 
+
+
 			if(set == "Retrieve")
             {
             	$("#CONTAINER").load("Questions/Retrieve.html #" + currentQ);
-                updateChart(currentQ,set);	
+                setTimeout(function(){ updateChart(currentQ,set); }, 500);	
             }
             else if(set == "Filter")
             {
             	$("#CONTAINER").load("Questions/Filter.html #" + currentQ);
-                updateChart(currentQ,set);	
+                setTimeout(function(){ updateChart(currentQ,set); }, 500);	
             }   
             else if(set == "Derived")
             {
             	$("#CONTAINER").load("Questions/Derived.html #" + currentQ);
-                updateChart(currentQ,set);	
+                setTimeout(function(){ updateChart(currentQ,set); }, 500);	
             }  
             else if(set == "Range")
             {
             	$("#CONTAINER").load("Questions/Range.html #" + currentQ);
-                updateChart(currentQ,set);	
+                setTimeout(function(){ updateChart(currentQ,set); }, 500);	
             }
             else if(set == "Correlation")
             {
             	$("#CONTAINER").load("Questions/Correlation.html #" + currentQ);
-                updateChart(currentQ,set);	
+                setTimeout(function(){ updateChart(currentQ,set); }, 500);
             }
             else if(set == "Extremum")
             {
             	$("#CONTAINER").load("Questions/Extremum.html #" + currentQ);
-                updateChart(currentQ,set);	
+                setTimeout(function(){ updateChart(currentQ,set); }, 500);
             }
             else if(set == "Order")
             {
             	$("#CONTAINER").load("Questions/Order.html #" + currentQ);
-                updateChart(currentQ,set);	
+                setTimeout(function(){ updateChart(currentQ,set); }, 500);	
             }  
             else if(set == "Cluster")
             {
             	$("#CONTAINER").load("Questions/Cluster.html #" + currentQ);
-                updateChart(currentQ,set);	
+                setTimeout(function(){ updateChart(currentQ,set); }, 500);
             }    
             else if(set == "Anomalies")
             {
             	$("#CONTAINER").load("Questions/Anomalies.html #" + currentQ);
-                updateChart(currentQ,set);	
+                setTimeout(function(){ updateChart(currentQ,set); }, 500);	
             }
             else if(set == "Distribution")
             {
             	$("#CONTAINER").load("Questions/Distribution.html #" + currentQ);
-                updateChart(currentQ,set);	
+                setTimeout(function(){ updateChart(currentQ,set); }, 500);	
             }
         }
 
@@ -260,16 +286,18 @@
 			 <div class="question" id="0"> <!-- This is considered as question 0 -->
 			    
 			
-				<h4> NOTE: To ensure best performance, we recommend you run the study in full screen mode. </h4>
+				<h4> NOTE: To ensure best performance, we recommend you run the study in full screen mode. <font color="red">Kindly DO NOT refresh the page during the session.</font> If you wish to restart the study, you should go to XXXXXXXXX. </h4>
                 <p>
-                The goal of this study is to measure efficiency of different types of visualizations. 
+                The goal of this study is to measure efficiency of different types of charts. 
 
-                In this study, you will be asked to complete 25 tasks. For each task, a question is shown on top of the page and a visualization below that. Your task is to answer each question by getting help of the visualization. Most of the questions should be answered by selecting one of the multiple options. 
+                In this study, you will be asked to complete a set of tasks. For each task, a question is shown on top of the page and a chart below that. Your task is to answer each question by getting help of the given chart. Most of the questions should be answered by selecting one of the multiple options. </br></br>
 
+                <h4>Example</h4>
 
+                <embed type="image/png" src="Figures/First.png" width="100%" height:"auto"; align="middle" class="questionImage" />
                 </p> 
 
-                <h4> <font color="red">Kindly DO NOT refresh the page during the session.</font> If you wish to restart the study, you should go to XXXXXXXXX. </h4>
+                
 				<tr>
 				    <td width=20 style="font-weight:bold;vertical-align:text-center;"> Age: </td></br>
 				    <td>
@@ -301,7 +329,7 @@
 				    <td> 
 				        <input type="checkbox" name="tool" value="Excel"> Microsoft Excel </br>
                         <input type="checkbox" name="tool" value="Tableau"> Tableau </br>
-                        <input type="checkbox" name="tool" value="Spotfire"> Sportfire </br>
+                        <input type="checkbox" name="tool" value="Spotfire"> Spotfire </br>
                         <input type="checkbox" name="tool" value="D3"> D3</br>
                         <input type="checkbox" name="tool" value="Processing"> Processing</br>
                     </td>
