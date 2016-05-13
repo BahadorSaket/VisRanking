@@ -5,60 +5,78 @@
 </head>
 <body>
 
-  	<div class='question' id="1">
-	     Following visualization shows the average Highway Miles Per Gallon for 5 types of cars (e.g., Sedan, and SUV). How many different type of cars are shown in the visualization below?<br />
-		  <input type="radio" name="answer" value="trial" /> 4<br />
-       	  <input type="radio" name="answer" value="trial" /> 5<br />
-       	  <input type="radio" name="answer" value="trial" /> 6<br />
-       	  <input type="radio" name="answer" value="trial" /> This question cannot be answered using the visualization below.<br/><br/>
+	<div class='question instruction' id="1">
+		  <h3> <font color="red">NOTE:</font> To ensure best performance, we suggest you to run the study in full screen mode. Kindly DO NOT refresh the page during the session. </h3>
+	      Durign the trial session, you will be asked to go through 5 questions. Please try to use the given charts to answer these questions as accurate as possible. Press <b>"Start Trial Session"</b> when you are ready to start.<br /><br />
+       	  <input type="submit" value="Start Trial Session" onclick="showNextQ()" /> <br />
+	</div>
+
+  	<div class='question' id="2">
+	     The following bar chart shows the average <b>Highway Miles Per Gallon</b> for different <b>types of cars (e.g., Sedan, and SUV)</b>. How many different types of cars are shown in the chart below?<br />
+	      <p id="Answer"></p>
+		  <input type="radio" name="answer" value="Wrong" /> 4<br />
+       	  <input type="radio" name="answer" value="Correct" /> 5<br />
+       	  <input type="radio" name="answer" value="Wrong" /> 6<br />
+       	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="2">
-	      Following visualization shows the average Retail Price for cars with different number of cylinders (e.g., 3 and 4). How many different number of cylinders are shown in the visualization below? <br />
-		  <input type="radio" name="answer" value="trial" /> 6<br />
-       	  <input type="radio" name="answer" value="trial" /> 7<br />
-       	  <input type="radio" name="answer" value="trial" /> 8 <br />
-       	  <input type="radio" name="answer" value="trial" /> This question cannot be answered using the visualization below.<br/><br/>
+        <div class='question' id="3">
+	      The following pie chart shows the average <b>Retail Price</b> for cars with different number of <b>Cylinders (e.g., 3 and 4)</b>. How many different number of Cylinders are shown in the chart below? <br />
+	      <p id="Answer"></p>
+		  <input type="radio" name="answer" value="Wrong" /> 6<br />
+       	  <input type="radio" name="answer" value="Wrong" /> 7<br />
+       	  <input type="radio" name="answer" value="Correct" /> 8 <br />
+       	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
-		  <div id='vis'> </div>
+		  <div style="width:50%;  display: inline-block;" id='vis'> </div>
+		  <div style="float: right; width:50%; display: inline-block;" id='legend'> </div>
 	    </div>
 
-	     <div class='question' id="3">
-	      Following visualization shows the average Highway Miles Per Gallon for cars with different number of cylinders (e.g., 3 and 4). How many different number of cylinders are shown in the visualization below?  <br />
-		  <input type="radio" name="answer" value="trial" /> 6<br />
-       	  <input type="radio" name="answer" value="trial" /> 7<br />
-       	  <input type="radio" name="answer" value="trial" /> 8 <br />
-       	  <input type="radio" name="answer" value="trial" /> This question cannot be answered using the visualization below.<br/><br/>
+	     <div class='question' id="4">
+	      The following scatterplot shows the average <b>Highway Miles Per Gallon</b> for cars with different number of <b>Cylinders (e.g., 3 and 4)</b>. How many different number of Cylinders are shown in the chart below?  <br />
+	      <p id="Answer"></p>
+		  <input type="radio" name="answer" value="Correct" /> 8<br />
+       	  <input type="radio" name="answer" value="Wrong" /> 6<br />
+       	  <input type="radio" name="answer" value="Wrong" /> 7 <br />
+       	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="4">
-	       Following visualization shows the average weitght for cars width different widths (e.g., 60 and 70). How many different sizes of width are shown in the visualization below? <br />
-		  <input type="radio" name="answer" value="trial" /> 10<br />
-       	  <input type="radio" name="answer" value="trial" /> 13<br />
-       	  <input type="radio" name="answer" value="trial" /> 15<br />
-       	  <input type="radio" name="answer" value="trial" /> This question cannot be answered using the visualization below.<br/><br/>
+        <div class='question' id="5">
+	       The following line chart shows the average <b>Weitght</b> for cars with different sizes of <b>Width (e.g., 60 and 70)</b>. How many different sizes of Width are shown in the chart below? <br />
+	      <p id="Answer"></p>
+		  <input type="radio" name="answer" value="Wrong" /> 10<br />
+       	  <input type="radio" name="answer" value="Wrong" /> 13<br />
+       	  <input type="radio" name="answer" value="Correct" /> 15<br />
+       	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
 
 	
-        <div class='question' id="5">
-         Following visualization shows the average Highway Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). How many different type of cars are shown in the visualization below?<br />
-		  <input type="radio" name="answer" value="trial" /> 5<br />
-       	  <input type="radio" name="answer" value="trial" /> 6<br />
-       	  <input type="radio" name="answer" value="trial" /> 7<br />
-       	  <input type="radio" name="answer" value="trial" /> This question cannot be answered using the visualization below.<br/><br/>
+        <div class='question' id="6">
+         The following table shows the average <b>Highway Miles Per Gallon</b> for different <b>types of cars (e.g., Sedan and SUV)</b>. How many different types of cars are shown in the table below?<br />
+          <p id="Answer"></p>
+		  <input type="radio" name="answer" value="Correct" /> 5<br />
+       	  <input type="radio" name="answer" value="Wrong" /> 6<br />
+       	  <input type="radio" name="answer" value="Wrong" /> 7<br />
+       	  <input type="radio" name="answer" value="Wron" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	      
 	    </div>
 
-	    <div class='question' id="6">
-	      Following visualization shows the average Horsepower for cars with different number of cylinders (e.g., 3 and 4). How many different number of cylinders are shown in the visualization below?
+	    <div class='question instruction' id="7">
+	       <p>Thank You. You completed the Trial Session.</p>  
+	        Now is the time to start the main experiment. Similar to the trial session, in the main experiment you will be asked to complete about 20 questions. However, in the main experiment after answering each question and pressing the "Submit" button you cannot edit your answer. So, please answer the questions <b>as accurate as possible</b> and press "Submit" button only when you are sure about your answer. Press <b>"Start"</b> when you are ready to start the main experiment.<br /><br />
+       	  <input type="submit" value="Start" onclick="showNextQ()" /> <br />
+	    </div>
+
+	    <div class='question' id="8">
+	      The following line chart shows the average <b>Horsepower (HP)</b> for cars with different number of <b>Cylinders (e.g., 3 and 4)</b>. How many different number of Cylinders are shown in the chart below?
 	       <br />
 		  <input type="radio" name="answer" value="Wrong" /> 7 <br />
        	  <input type="radio" name="answer" value="Correct" /> 8<br />
@@ -68,19 +86,20 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="7">
-	      Following visualization shows the average weight for cars with different number of cylinders (e.g., 3 and 4). How many different number of cylinders are shown in the visualization below?
+        <div class='question' id="9">
+	      The following pie chart shows the average <b>Weight</b> for cars with different number of <b>Cylinders (e.g., 3 and 4)</b>. How many different number of Cylinders are shown in the chart below?
 	       <br />
 		   <input type="radio" name="answer" value="Wrong" /> 7 <br />
        	  <input type="radio" name="answer" value="Wrong" /> 10<br />
        	  <input type="radio" name="answer" value="Correct" /> 8 <br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
-		  <div id='vis'> </div>
+		   <div style="width:50%;  display: inline-block;" id='vis'> </div>
+		  <div style="float: right; width:50%; display: inline-block;" id='legend'> </div>
 	    </div>
 
-	    <div class='question' id="8">
-	      Following visualization shows the average City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). How many different type of cars are shown in the visualization below?<br />
+	    <div class='question' id="10">
+	      The following scatterplot shows the average <b>City Miles Per Gallon</b> for different <b>types of cars (e.g., Sedan and SUV)</b>. How many different types of cars are shown in the chart below?<br />
 		  <input type="radio" name="answer" value="Correct" /> 5<br />
        	  <input type="radio" name="answer" value="Wrong" /> 6<br />
        	  <input type="radio" name="answer" value="Wrong" /> 8<br />
@@ -89,8 +108,8 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="9">
-	      Following visualization shows the average Dealer Cost Per Gallon for cars width different Wheel Base (e.g., 60 and 70). How many different sizes of Wheel Base are shown in the visualization below?<br />
+        <div class='question' id="11">
+	      The following scatterplot shows the average <b>Dealer Cost</b> for cars with different sizes of <b>Wheel Base (e.g., 60 and 70)</b>. How many different sizes of Wheel Base are shown in the chart below?<br />
 		  <input type="radio" name="answer" value="Wrong" /> 21 <br />
        	  <input type="radio" name="answer" value="Correct" /> 19<br />
        	  <input type="radio" name="answer" value="Wrong" /> 23<br />
@@ -99,8 +118,8 @@
 		  <div id='vis'> </div>
 	    </div>
     
-	     <div class='question' id="10">
-	      Following visualization shows the average Horsepowe for cars with different values of City Miles Per Gallon (e.g., 4 and 6). How many different values of City Miles Per Gallon are shown in the visualization below? <br />
+	     <div class='question' id="12">
+	      The following line chart shows the average <b>Horsepower (HP)</b> for cars with different values of <b>City Miles Per Gallon (e.g., 4 and 6)</b>. How many different values of City Miles Per Gallon are shown in the chart below? <br />
 		  <input type="radio" name="answer" value="Wrong" /> 19 <br />
        	  <input type="radio" name="answer" value="Wrong" /> 20<br />
        	  <input type="radio" name="answer" value="Correct" /> 32<br />
@@ -109,16 +128,16 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="11">
-	      Following visualization shows the average Dealer Cost for cars with different number of cylinders (e.g., 3 and 4). Please select True. <br />
+        <div class='question' id="13">
+	      The following scatterplot shows the average <b>Engine Size</b> for cars with different number of <b>Cylinders (e.g., 3 and 4)</b>. Please select True. <br />
 		  <input type="radio" name="answer" value="Wrong" /> False<br />
        	  <input type="radio" name="answer" value="Correct" /> True<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
 
-        <div class='question' id="12">
-	      Following visualization shows the average Engine Size for cars with different number of cylinders (e.g., 4 and 6). How many different number of cylinders are shown in the visualization below? <br />
+        <div class='question' id="14">
+	      The following scatterplot shows the average <b>Engine Size</b> for cars with different number of <b>Cylinders (e.g., 3 and 4)</b>. How many different number of Cylinders are shown in the chart below? <br />
 		  <input type="radio" name="answer" value="Wrong" /> 7 <br />
        	  <input type="radio" name="answer" value="Wrong" /> 10<br />
        	  <input type="radio" name="answer" value="Correct" /> 8 <br />
@@ -127,18 +146,19 @@
 		  <div id='vis'> </div>
 	    </div>
 
-	    <div class='question' id="13">
-	      Following visualization shows the average City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). How many different type of cars are shown in the visualization below?<br />
+	    <div class='question' id="15">
+	      The following pie chart shows the average <b>City Miles Per Gallon</b> for different <b>types of cars (e.g., Sedan and SUV)</b>. How many different type of cars are shown in the chart below?<br />
 		   <input type="radio" name="answer" value="Correct" /> 5<br />
        	  <input type="radio" name="answer" value="Wrong" /> 6<br />
        	  <input type="radio" name="answer" value="Wrong" /> 8<br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
-		  <div id='vis'> </div>
+		  <div style="width:50%;  display: inline-block;" id='vis'> </div>
+		  <div style="float: right; width:50%; display: inline-block;" id='legend'> </div>
 	    </div>
        
-        <div class='question' id="14">
-	       Following visualization shows the average City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). How many different type of cars are shown in the visualization below? <br />
+        <div class='question' id="16">
+	      The following table shows the average <b>City Miles Per Gallon</b> for different <b>types of cars (e.g., Sedan and SUV)</b>. How many different type of cars are shown in the chart below? <br />
 		  <input type="radio" name="answer" value="Wrong" /> 6<br />
        	  <input type="radio" name="answer" value="Correct" /> 5<br />
        	  <input type="radio" name="answer" value="Wrong" /> 8<br />
@@ -146,11 +166,9 @@
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
-          
-      
  
-	     <div class='question' id="15">
-	      Following visualization shows the average Dealer Cost Per Gallon for cars width different Wheel Base (e.g., 60 and 70). How many different sizes of Wheel Base are shown in the visualization below?<br />
+	     <div class='question' id="17">
+	      The following table shows the average <b>Dealer Cost</b> for cars with different size of <b>Wheel Bases (e.g., 60 and 70)</b>. How many different sizes of Wheel Bases are shown in the chart below?<br />
 		  <input type="radio" name="answer" value="Wrong" /> 33 <br />
        	  <input type="radio" name="answer" value="Correct" /> 34<br />
        	  <input type="radio" name="answer" value="Wrong" /> 35<br />
@@ -159,8 +177,8 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="16">
-	       Following visualization shows the average Dealer Cost for cars with different number of cylinders (e.g., 3 and 4). How many different number of cylinders are shown in the visualization below?<br />
+        <div class='question' id="18">
+	      The following bar chart shows the average <b>Dealer Cost</b> for cars with different number of <b>Cylinders (e.g., 3 and 4)</b>. How many different number of Cylinders are shown in the chart below?<br />
 		  <input type="radio" name="answer" value="Wrong" /> 7 <br />
        	  <input type="radio" name="answer" value="Correct" /> 8<br />
        	  <input type="radio" name="answer" value="Wrong" /> 10 <br />
@@ -169,8 +187,8 @@
 		  <div id='vis'> </div>
 	    </div>
 
-	    <div class='question' id="17">
-	      Following visualization shows the average Engine Size for cars with different number of cylinders (e.g., 3 and 4). How many different number of cylinders are shown in the visualization below? <br />
+	    <div class='question' id="19">
+	      The following table shows the average <b>Engine Size</b> for cars with different number of <b>Cylinders (e.g., 3 and 4)</b>. How many different number of Cylinders are shown in the chart below? <br />
 	      <input type="radio" name="answer" value="Wrong" /> 7 <br />
        	  <input type="radio" name="answer" value="Wrong" /> 10<br />
        	  <input type="radio" name="answer" value="Correct" /> 8 <br />
@@ -179,8 +197,8 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="18">
-	      Following visualization shows the average Engine Size for cars with different values of Highway Miles Per Gallon (e.g., 39 and 40). How many different values of  Highway Miles Per Gallon are shown in the visualization below?<br />
+        <div class='question' id="20">
+	      The following bar chart shows the average <b>Engine Size</b> for cars with different values of <b>Highway Miles Per Gallon (e.g., 39 and 40)</b>. How many different values of Highway Miles Per Gallon are shown in the chart below?<br />
 		  <input type="radio" name="answer" value="Wrong" /> 34<br />
        	  <input type="radio" name="answer" value="Correct" /> 33<br />
        	  <input type="radio" name="answer" value="Wrong" /> 32<br />
@@ -189,18 +207,19 @@
 		  <div id='vis'> </div>
 	    </div>
         
-	    <div class='question' id="19">
-	      Following visualization shows the average Retail Price for cars with different Engine sizes (e.g., 3.6 and 1.4). How many different Engine sizes are shown in the visualization below?<br />
-		  <input type="radio" name="answer" value="Wrong" /> 38<br />
-       	  <input type="radio" name="answer" value="Correct" /> 40<br />
-       	  <input type="radio" name="answer" value="Wrong" /> 37<br />
+	    <div class='question' id="21">
+	      The following pie chart shows the average <b>Horsepower (HP)</b> for cars with different <b>Widths</b>. How many different Width sizes are shown in the chart below?<br />
+		  <input type="radio" name="answer" value="Wrong" /> 8<br />
+       	  <input type="radio" name="answer" value="Correct" /> 19<br />
+       	  <input type="radio" name="answer" value="Wrong" /> 16<br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
-		  <div id='vis'> </div>
+		  <div style="width:50%;  display: inline-block;" id='vis'> </div>
+		  <div style="float: right; width:50%; display: inline-block;" id='legend'> </div>
 	    </div>
 
-	     <div class='question' id="20">
-	      Following visualization shows the average City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). How many different type of cars are shown in the visualization below?<br />
+	     <div class='question' id="22">
+	      The following line chart shows the average <b>City Miles Per Gallon</b> for different <b>types of cars (e.g., Sedan and SUV)<b>. How many different type of cars are shown in the chart below?<br />
 		  <input type="radio" name="answer" value="Wrong" /> 6<br />
        	  <input type="radio" name="answer" value="Correct" /> 5<br />
        	  <input type="radio" name="answer" value="Wrong" /> 8<br />
@@ -209,8 +228,8 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="21">
-       	  Following visualization shows the average City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). How many different type of cars are shown in the visualization below?<br />
+        <div class='question' id="23">
+       	 The following bar chart shows the average <b>City Miles Per Gallon</b> for different <b>types of cars (e.g., Sedan and SUV)<b>. How many different type of cars are shown in the chart below?<br />
 		   <input type="radio" name="answer" value="Wrong" /> 6<br />
        	  <input type="radio" name="answer" value="Correct" /> 5<br />
        	  <input type="radio" name="answer" value="Wrong" /> 8<br />
@@ -219,16 +238,16 @@
 		  <div id='vis'> </div>
 	    </div>
 
-	    <div class='question' id="22">
-	      Following visualization shows the average Horsepower for cars with different width (e.g., 66 and 73). Please select False. <br />
+	    <div class='question' id="24">
+	      The following bar chart shows the average <b>Horsepower (HP)</b> for cars with different <b>Widths (e.g., 66 and 73)</b>. Please select False. <br />
 		  <input type="radio" name="answer" value="Correct" /> False<br />
        	  <input type="radio" name="answer" value="Wrong" /> True<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
 
- 	    <div class='question ranking' id="23">
-	      All following visualizations show the average Highway Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). Suppose you are asked to find the different number of cylinders. Rank the below visualizations in the order of preference for performing this task? <b>(1 being the most useful to 5 being least useful) </b><br /><br />
+ 	    <div class='question ranking' id="25">
+	      All following charts show the average Highway Miles Per Gallon for different types of cars (e.g., Sedan and SUV). Suppose you are asked to find the different types of cars shown in a chart. Rank the below charts in the order of preference for performing this task. <b>(1 being the most useful to 5 being least useful) </b><br /><br />
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br /><br />
 		  
 		  <div style="margin-bottom: 10px; height:400;">
@@ -290,8 +309,8 @@
 	      </div>
 	    </div>
 
-	    <div class='question ranking' id="24">
-	      All following visualizations show the average length for 8 types of cylinders (e.g., 3, 4). Suppose you are asked to find the number of different type of cars. Rank the below visualizations in the order of preference for performing this task? <b>(1 being the most useful to 5 being least useful) </b><br /><br />
+	    <div class='question ranking' id="26">
+	      All following charts show the average length for different types of Cylinders (e.g., 3, 4). Suppose you are asked to find the number of different Cylinders. Rank the below charts in the order of preference for performing this task. <b>(1 being the most useful to 5 being least useful) </b><br /><br />
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br /><br />
 	     <div style="margin-bottom: 10px; height:400;">
 			    <div style="float: right; width:50%; display: inline-block;" id="vis1">  
@@ -353,8 +372,8 @@
 	      </div>
 	    </div>
 
-		<div class='question ranking' id="25">
-	      All following visualizations show the average Dealer cost for cars with different width size (e.g., 10, 20). Suppose you are asked to find the different sizes of width. Rank the below visualizations in the order of preference for performing this task? <b>(1 being the most useful to 5 being least useful) </b><br /><br />
+		<div class='question ranking' id="27">
+	      All following charts show the average Dealer cost for cars with different width sizes (e.g., 10, 20). Suppose you are asked to find how many different Width sizes we have. Rank the below visualizations in the order of preference for performing this task. <b>(1 being the most useful to 5 being least useful) </b><br /><br />
        	  <input type="submit" value="Submit" onclick="showNextQ(); saveAnswers();" /> <br /><br />
 		  <div style="margin-bottom: 10px; height:400;">
 			    <div style="float: right; width:50%; display: inline-block;" id="vis1">  
@@ -415,7 +434,7 @@
 	            </div>
 	      </div>
 	    </div>
-	   <div  class="question" id="26">
+	   <div  class="question" id="28">
 		  <h3>End of the study </h3> <br />
 		  <p>
 		  Thank you for participating.<br />

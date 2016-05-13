@@ -136,118 +136,116 @@
 
 
             else if(set == "Cluster"){
-            	if(currentQ == 1){
+            	if(currentQ == 2){
             		questionID = "Trial";
 		        	dataVisualizer.drawBarChart(data,"Type","Highway Miles Per Gallon","#vis",1000,600);
 		        }
-                if(currentQ == 5){
-                	questionID = "Trial";
-	        		dataVisualizer.drawTable(data,"Type","Highway Miles Per Gallon","#vis",400);
-		        }
-
-		        if(currentQ == 2){
+		        if(currentQ == 3){
 		        	questionID = "Trial";
 		        	dataVisualizer.drawPieChart(data,"Cyl","Retail Price","#vis",1000,600);
 		        }
-		        if(currentQ == 3){
+		        if(currentQ == 4){
 		        	questionID = "Trial";
 		        	dataVisualizer.drawScatterplot(data,"Cyl","Highway Miles Per Gallon","#vis",1000,600);
 		        }
-
-		        if(currentQ == 4){
+		        if(currentQ == 5){
 		        	questionID = "Trial";
 	        		dataVisualizer.drawLineChart(data,"Width","Weight","#vis",1000,600);
+		        }
+		        if(currentQ == 6){
+                	questionID = "Trial";
+	        		dataVisualizer.drawTable(data,"Type","Highway Miles Per Gallon","#vis",400);
 		        }
 		       
 		       
 
 	/*********************/
-		        if(currentQ == 6){
+		        if(currentQ == 8){
 		        	questionID = "LineChart_Cluster_Ordinal_Numerical";
 		        	dataVisualizer.drawLineChart(data,"Cyl","Horsepower(HP)","#vis",1000,600);
 		        }
 	        	
-		        if(currentQ == 7){
+		        if(currentQ == 9){
 		        	questionID = "PieChart_Cluster_Ordinal_Numerical";
 		        	dataVisualizer.drawPieChart(data,"Cyl","Weight","#vis",1000,600);
 		        }
-	            if(currentQ == 8){
+	            if(currentQ == 10){
 	            	questionID = "Scatterplot_Cluster_Nominal_Numerical";
 		        	dataVisualizer.drawScatterplot(data,"Type","City Miles Per Gallon","#vis",1000,600);
 		        }
-		        if(currentQ == 9){
+		        if(currentQ == 11){
 		        	questionID = "Scatterplot_Cluster_Numerical_Numerical";
 		        	dataVisualizer.drawScatterplot(data,"Wheel Base","Dealer Cost","#vis",1000,600);
 		        }
-		        if(currentQ == 10){
+		        if(currentQ == 12){
 		        	questionID = "LineChart_Cluster_Numerical_Numerical";
 		        	dataVisualizer.drawLineChart(data,"Width","Horsepower(HP)","#vis",1000,600);
 		        }
-                if(currentQ == 11){
+                if(currentQ == 13){
                 	questionID = "Scatterplot_Cluster_Ordinal_Numerical";
 		        	dataVisualizer.drawScatterplot(data,"Cyl","Engine Size (l)","#vis",1000,600);
 		        }
-		        if(currentQ == 12){
+		        if(currentQ == 14){
 		        	questionID = "Test";
 		        	dataVisualizer.drawScatterplot(data,"Cyl","Engine Size (l)","#vis",1000,600);
 		        }
 
-		        if(currentQ == 13){
+		        if(currentQ == 15){
 		        	questionID = "PieChart_Cluster_Nominal_Numerical";
 		        	dataVisualizer.drawPieChart(data,"Type","City Miles Per Gallon","#vis",1000,600);
 		        }
-		        if(currentQ == 14){
+		        if(currentQ == 16){
 		        	questionID = "Table_Cluster_Nominal_Numerical";
 		        	dataVisualizer.drawTable(data,"Type","City Miles Per Gallon","#vis",400);
 		        }
-		        if(currentQ == 15){
+		        if(currentQ == 17){
 		        	questionID = "Table_Cluster_Numerical_Numerical";
 		        	dataVisualizer.drawTable(data,"Wheel Base","Dealer Cost","#vis",400);
 		        }
-            	if(currentQ == 16){
+            	if(currentQ == 18){
             		questionID = "BarChart_Cluster_Ordinal_Numerical";
 	        		dataVisualizer.drawBarChart(data,"Cyl","Dealer Cost","#vis",1000,600);
 		        }
-		        if(currentQ == 17){
+		        if(currentQ == 19){
 		        	questionID = "Table_Cluster_Ordinal_Numerical";
 		        	dataVisualizer.drawTable(data,"Cyl","Engine Size (l)","#vis",400);
 		        }
     	  
-            	if(currentQ == 18){
+            	if(currentQ == 20){
             		questionID = "BarChart_Cluster_Numerical_Numerical";
 	        		dataVisualizer.drawBarChart(data,"Highway Miles Per Gallon","Engine Size (l)","#vis",1200,600);
 		        }
 	          
-		        if(currentQ == 19){
+		        if(currentQ == 21){
 		        	questionID = "PieChart_Cluster_Numerical_Numerical";
-		        	dataVisualizer.drawPieChart(data,"Engine Size (l)","Retail Price","#vis",1000,600);
+		        	dataVisualizer.drawPieChart(data,"Width","Horsepower(HP)","#vis",1000,600);
 		        }
-		         if(currentQ ==20){
+		         if(currentQ ==22){
 		         	questionID = "LineChart_Cluster_Nominal_Numerical";
 		        	dataVisualizer.drawLineChart(data,"Type","City Miles Per Gallon","#vis",1000,600);
 		        }
 		      
-		        if(currentQ == 21){
+		        if(currentQ == 23){
 		        	questionID = "BarChart_Cluster_Nominal_Numerical";
 	        		dataVisualizer.drawBarChart(data,"Type","City Miles Per Gallon","#vis",1000,600);
 		        }
 
-		        if(currentQ == 22){
+		        if(currentQ == 24){
 		        	questionID = "Test";
 		        	dataVisualizer.drawBarChart(data,"Width","Horsepower(HP)","#vis",1200,600);
 		        }
-		        if(currentQ == 23){
+		        if(currentQ == 25){
 		        	questionID = "Ranking_Cluster_Ordinal_Numerical";
 		        	dataVisualizer.drawBarChart(data,"Cyl","Len","#vis1",500,200);
-		        	dataVisualizer.drawPieChart(data,"Cyl","Len","#vis2",500,400);
+		        	dataVisualizer.drawPieChart(data,"Cyl","Len","#vis2",400,300);
 		        	dataVisualizer.drawScatterplot(data,"Cyl","Len","#vis3",500,200);
 		        	dataVisualizer.drawLineChart(data,"Cyl","Len","#vis4",500,200);
 		        	dataVisualizer.drawTable(data,"Cyl","Len","#vis5",300);
 
 		        }
-		        if(currentQ == 24){
+		        if(currentQ == 26){
 		        	questionID = "Ranking_Cluster_Nominal_Numerical";
-		        	dataVisualizer.drawPieChart(data,"Type","Highway Miles Per Gallon","#vis1",500,400);
+		        	dataVisualizer.drawPieChart(data,"Type","Highway Miles Per Gallon","#vis1",400,300);
 		        	dataVisualizer.drawScatterplot(data,"Type","Highway Miles Per Gallon","#vis2",500,200);
 		        	dataVisualizer.drawBarChart(data,"Type","Highway Miles Per Gallon","#vis3",500,200);
 		        	dataVisualizer.drawLineChart(data,"Type","Highway Miles Per Gallon","#vis4",500,200);
@@ -255,9 +253,9 @@
 
 		        }
 		      
-		        if(currentQ == 25){
+		        if(currentQ == 27){
 		        	questionID = "Ranking_Cluster_Numerical_Numerical";
-		        	dataVisualizer.drawPieChart(data,"Width","Dealer Cost","#vis1",500,400);
+		        	dataVisualizer.drawPieChart(data,"Width","Dealer Cost","#vis1",400,300);
 		        	dataVisualizer.drawScatterplot(data,"Width","Dealer Cost","#vis2",500,200);
 		        	dataVisualizer.drawBarChart(data,"Width","Dealer Cost","#vis3",500,200);
 		        	dataVisualizer.drawLineChart(data,"Width","Dealer Cost","#vis4",500,200);
