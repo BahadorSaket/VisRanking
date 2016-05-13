@@ -57,12 +57,18 @@ function onlyUnique(value, index, self) { // This function returns an array with
         if(divSize<=6){
             labelFontSize = labelFontSizeMap['s'];
             tickFontSize = tickFontSizeMap['s'];
-        }else if(divSize<=10){
+            pieIn=15;
+            pieOut=15;
+        }else if(divSize<=15){
             labelFontSize = labelFontSizeMap['m'];
             tickFontSize = tickFontSizeMap['m'];
-        }else if(divSize>10){
+            pieIn=15;
+            pieOut=15;
+        }else if(divSize>15){
             labelFontSize = labelFontSizeMap['l'];
             tickFontSize = tickFontSizeMap['l'];
+            pieIn=40;
+            pieOut=40;
         }
     }
 
@@ -229,16 +235,17 @@ function onlyUnique(value, index, self) { // This function returns an array with
         // console.log(tickFontSize)
         // axes styling
         svg.selectAll('.axis')
-            .style('font',''+tickFontSize+' sans-serif');
+           .style('font',''+tickFontSize+' sans-serif');
 
         svg.selectAll('.tick')
-            .selectAll('text')
-            .style('font',''+tickFontSize+' sans-serif');
+           .selectAll('text')
+           .style('font',''+tickFontSize+' sans-serif');
 
         svg.selectAll('.axis path')
-            .style('fill','none')
-            .style('stroke','#000')
-            .style('shape-rendering','crispEdges');
+           .style('fill','none')
+           .style('stroke','#000')
+           .style('shape-rendering','crispEdges');
+
         svg.selectAll('.axis line')
             .style('fill','none')
             .style('stroke','#000')
@@ -277,7 +284,7 @@ function onlyUnique(value, index, self) { // This function returns an array with
          
         */
 
-          var arc = d3.svg.arc().outerRadius(radius);
+        var arc = d3.svg.arc().outerRadius(radius);
 
         var pie = d3.layout.pie() //this will create arc data for us given a list of values
           .value(function(d) { return d.value; }) // Binding each value to the pie
@@ -291,7 +298,7 @@ function onlyUnique(value, index, self) { // This function returns an array with
 
         g.append("path").attr("d", arc).style("fill", function(d) { return color(d.data.label); });
         
-
+/*
         g.filter(function(d) { return d.endAngle - d.startAngle > .2; }).append("svg:text")
          .attr("dy", ".35em")
           .attr("text-anchor", "middle")
@@ -304,20 +311,21 @@ function onlyUnique(value, index, self) { // This function returns an array with
           })
           .style("fill", "black")
           .style("font", "bold 11px Arial")
-          .text(function(d) { return d.data.label; });
+          .text(function(d) { return d.data.value; });
 
+*/
 
         g.append("svg:text")
            .attr("transform", function(d) { //set the label's origin to the center of the arc
             //we have to make sure to set these before calling arc.centroid
-            d.outerRadius = radius + 40; // Set Outer Coordinate
-            d.innerRadius = radius + 50; // Set Inner Coordinate
+            d.outerRadius = radius + pieOut; // Set Outer Coordinate
+            d.innerRadius = radius + pieIn; // Set Inner Coordinate
            // return "translate(" + arc.centroid(d) + ")rotate(" + angle(d) + ")";
             return "translate(" + arc.centroid(d) + ")";
            })
           .attr("text-anchor", "middle") //center the text on it's origin
           .style("fill", "black")
-          .style("font", "bold 12px Arial")
+          .style('font',''+tickFontSize+' sans-serif')
           .text(function(d, i) { return Math.floor(d.data.value); }); 
       /*
         g.append("text").attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
@@ -334,6 +342,39 @@ function onlyUnique(value, index, self) { // This function returns an array with
                         .attr("font-size", "10px")
                         .text(function(d) { return d.data.value; });
          */
+
+ 
+
+
+
+
+
+    var legend = d3.select("#legend").append("svg").attr("class", "legend")
+    .attr("width", "300")
+    .attr("height", "100%")
+    .selectAll("g")
+    .data(data)
+    .enter().append("g")
+    .attr("transform", function(d, i) { return "translate(10," + (i+1) * 20 + ")"; });
+
+    d3.select(".legend").append("text")
+    .attr("x",20)
+    .attr("y",12)
+    .style("text-anchor", "middle")
+    .style("font", "bold 14px Arial")
+    .text(labels.xAttr);
+
+legend.append("rect")
+    .attr("width", 18)
+    .attr("height", 18)
+    .style("fill", function(d, i) { return color(d.label); });
+
+legend.append("text")
+    .attr("x", 24)
+    .attr("y", 9)
+    .attr("dy", ".35em")
+    .style('font',''+tickFontSize+' sans-serif')
+    .text(function(d) { return d.label; });
 
         function angle(d) {
           var a = (d.startAngle + d.endAngle) * 90 / Math.PI - 90;
@@ -479,6 +520,7 @@ function onlyUnique(value, index, self) { // This function returns an array with
             .style('fill','none')
             .style('stroke','#000')
             .style('shape-rendering','crispEdges');
+
         svg.selectAll('.axis line')
             .style('fill','none')
             .style('stroke','#000')
@@ -638,8 +680,11 @@ function onlyUnique(value, index, self) { // This function returns an array with
             .style("fill","none");
         
         // axes styling
+
         svg.selectAll('.axis')
             .style('font',''+tickFontSize+' sans-serif');
+
+
 
         svg.selectAll('.tick')
             .selectAll('text')

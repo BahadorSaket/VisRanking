@@ -35,7 +35,7 @@
  .question {
     margin-left: auto;
     margin-right: auto;
-    width:85%; /*   WIDTH OF QUESTIONS' CONTAINER, IMAGES WILL FIT TO THIS CONTAINER AS WELL  */
+    width:90%; /*   WIDTH OF QUESTIONS' CONTAINER, IMAGES WILL FIT TO THIS CONTAINER AS WELL  */
     height:auto;
             
     border: 1px solid #ccc;
@@ -54,12 +54,15 @@
     margin-right: auto;
 }
 
-#Answer{
-    color:red;
-}
+
 .p-center{
 
     text-align: center;
+}
+.legend{
+      margin-left: auto;
+    display: block;
+
 }
 
 .select-center{

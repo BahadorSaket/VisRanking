@@ -12,18 +12,20 @@
 	    </div>
 
         <div class='question' id="2">
-	      Following visualization shows the Retail Price for cars with different number of Cylinders (e.g., 3 and 4). Which of the following shows ordered set of Cylinders based on their Retail Price (from the highest to the lowest)?<br />
+	      The following pie chart shows the average <b>Retail Price</b> for cars with different numbers of <b>Cylinders (Cyl)</b> (a legend is on the right side). Which of the following is the order of the number of Cylinders in decreasing order (from the highest to the lowest) of average Retail Price?<br />
 	      <p id="Answer"></p>
 		  <input type="radio" name="answer" value="Wrong" /> 9, 6, 5, 3 <br />
        	  <input type="radio" name="answer" value="Correct" /> 8, 5, 3<br />
        	  <input type="radio" name="answer" value="Wrong" /> 12, 3, 5, 6 <br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
-		  <div id='vis'> </div>
+		  <div style="width:50%;  display: inline-block;" id='vis'> </div>
+		  <div style="float: right; width:50%; display: inline-block;" id='legend'> </div>
+
 	    </div>
 
 	    <div class='question' id="3">
-	      Following visualization shows the Highway Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). Which of the following shows ordered set of car types based on their Highway Miles Per Gallon (from the highest to the lowest)?<br />
+	      The following table shows the average <b>Highway Miles Per Gallon</b> for 5 <b>types of cars (e.g., Sedan and SUV)</b>. Which of the following is the order of the types of cars in decreasing order (from the highest to the lowest) of average Highway Miles Per Gallon?<br />
 	      <p id="Answer"></p>
 		  <input type="radio" name="answer" value="Wrong" /> Sports Car, Wagon, SUV<br />
        	  <input type="radio" name="answer" value="Correct" /> Sedan, Minivan, SUV<br />
@@ -34,7 +36,7 @@
 	    </div>
 
 	    <div class='question' id="4">
-	      Following visualization shows the Highway Miles Per Gallon for 5 types of cars (e.g., Sedan, and SUV). Which of the following shows ordered set of car types based on their Highway Miles Per Gallon (from the highest to the lowest)? <br />
+	      The following bar chart shows the average <b>Highway Miles Per Gallon</b> for 5 <b>types of cars (e.g., Sedan and SUV)</b>. Which of the following is the order of the types of cars in decreasing order (from the highest to the lowest) of average Highway Miles Per Gallon?<br />
 	      <p id="Answer"></p>
 		  <input type="radio" name="answer" value="Wrong" /> Wagon, SUV, Sedan<br />
        	  <input type="radio" name="answer" value="Wrong" /> SUV, Sports Car, Wagon, Sedan<br />
@@ -45,7 +47,7 @@
 	    </div>
        
         <div class='question' id="5">
-	       Following visualization shows the Weitght for cars width different Widths (e.g., 60 and 70). Which of the following shows ordered set of Widths based on their Weight (from the highest to the lowest)?<br />
+	       The following line chart shows the average <b>Weight</b> for cars with different <b>Width Sizes (e.g., 60 and 70)</b>. Which of the following is the order of the Width sizes in decreasing order (from the highest to the lowest) of average Weight?<br />
 	       <p id="Answer"></p>
 		  <input type="radio" name="answer" value="Wrong" /> 81, 74, 65, 67 <br />
        	  <input type="radio" name="answer" value="Wrong" /> 72, 73, 80, 82<br />
@@ -56,7 +58,7 @@
 	    </div>
 
 	    <div class='question' id="6">
-	      Following visualization shows the Highway Miles Per Gallon for cars with different number of Cylinders (e.g., 3 and 4). Which of the following shows ordered set of Cylinders based on their Highway Miles Per Gallon (from the highest to the lowest)? <br />
+	      The following scatterplot shows the average <b>Highway Miles Per Gallon</b> for cars with different number of <b>Cylinders (Cyl)</b>. Which of the following is the order of the number of Cylinders in decreasing order (from the highest to the lowest) of average Highway Miles Per Gallon? <br />
 	      <p id="Answer"></p>
 		  <input type="radio" name="answer" value="Wrong" /> 4, 5, 6, 9<br />
        	  <input type="radio" name="answer" value="Wrong" /> 9, 5, 6, 12 <br />
@@ -68,12 +70,12 @@
 
 	    <div class='question instruction' id="7">
 	       <p>Thank You. You completed the Trial Session.</p>  
-	        Now is the time to start the main experiment. Similar to the trial session, in the main experiment you will be asked to complete about 20 questions. However, in the main experiment after answering each question and pressing the "Submit" button you can not edit your answer. So, please answer the questions <b>as accurate as possible</b> and press "Submit" button only when you are sure about your answer. Press "Start"</b> when you are ready to start the main experiment.<br /><br />
-       	  <input type="submit" value="Start Trial Session" onclick="showNextQ()" /> <br />
+	        Now is the time to start the main experiment. Similar to the trial session, in the main experiment you will be asked to complete about 20 questions. However, in the main experiment after answering each question and pressing the "Submit" button you cannot edit your answer. So, please answer the questions <b>as accurate as possible</b> and press "Submit" button only when you are sure about your answer. Press <b>"Start"</b> when you are ready to start the main experiment.<br /><br />
+       	  <input type="submit" value="Start" onclick="showNextQ()" /> <br />
 	    </div>
 
 	    <div class='question' id="8">
-	      Following visualization shows the City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). Which of the following shows ordered set of car types based on their City Miles Per Gallon (from the highest to the lowest)?<br />
+	      The following bar chart shows the average <b>City Miles Per Gallon</b> for 5 <b>types of cars (e.g., Sedan and SUV)</b>. Which of the following is the order of the types of cars in decreasing order (from the highest to the lowest) of average City Miles Per Gallon?<br />
 		  <input type="radio" name="answer" value="Correct" /> Wagon, Sedan, Sports car, SUV<br />
        	  <input type="radio" name="answer" value="Wrong" /> Sedan, Wagon, Sports car, SUV<br />
        	  <input type="radio" name="answer" value="Wrong" /> Wagon, Sedan, SUV, Minivan<br />
@@ -83,18 +85,18 @@
 	    </div>
        
         <div class='question' id="9">
-	      Following visualization shows the Weight for cars with different number of Cylinders (e.g., 3 and 4). Which of the following shows ordered set of Cylinders based on their Weight (from the highest to the lowest)??
-	       <br />
+	      The following pie chart shows the average <b>Weight</b> for cars with different number of <b>Cylinders (Cyl)</b>. Which of the following is the order of the number of Cylinders in decreasing order (from the highest to the lowest) of average Weight?<br />
 		   <input type="radio" name="answer" value="Wrong" /> 12, 8, 9, 5 <br />
        	  <input type="radio" name="answer" value="Wrong" /> 8, 6, 4, 5<br />
        	  <input type="radio" name="answer" value="Correct" /> 8, 5, 6, 4 <br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
-		  <div id='vis'> </div>
+		  <div style="width:50%;  display: inline-block;" id='vis'> </div>
+		  <div style="float: right; width:50%; display: inline-block;" id='legend'> </div>
 	    </div>
 
 	    <div class='question' id="10">
-	      Following visualization shows the City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). Which of the following shows ordered set of car types based on their City Miles Per Gallon (from the highest to the lowest)?<br />
+	      The following scatterplot shows the average <b>City Miles Per Gallon</b> for 5 <b>types of cars (e.g., Sedan and SUV)</b>. Which of the following is the order of the types of cars in decreasing order (from the highest to the lowest) of average City Miles Per Gallon?<br />
 		  <input type="radio" name="answer" value="Correct" /> Wagon, Sedan, SUV<br />
        	  <input type="radio" name="answer" value="Wrong" /> Sports Car, SUV, Sedan <br />
        	  <input type="radio" name="answer" value="Wrong" /> Wagon, Sports Car, Sedan <br />
@@ -104,7 +106,7 @@
 	    </div>
        
         <div class='question' id="11">
-	      Following visualization shows the Dealer Cost Per Gallon for cars width different Wheel Base (e.g., 60 and 70). Which of the following shows ordered set of Wheel Bases based on their Dealer Cost (from the highest to the lowest)? <br />
+	      The following scatterplot shows the average <b>Dealer Cost</b> for cars with different <b>Wheel Bases (e.g., 60 and 70)</b>. Which of the following is the order of the Wheel Bases in decreasing order (from the highest to the lowest) of average Dealer Cost?<br />
 		  <input type="radio" name="answer" value="Wrong" /> 89, 99, 121 <br />
        	  <input type="radio" name="answer" value="Correct" /> 120, 114, 89<br />
        	  <input type="radio" name="answer" value="Wrong" /> 0, 120, 121<br />
@@ -114,7 +116,7 @@
 	    </div>
     
 	     <div class='question' id="12">
-	      Following visualization shows the Engine Size for cars with different number of cylinders (e.g., 4 and 6). Which of the following shows ordered set of Cylinders based on their Engine Size (from the highest to the lowest)?<br />
+	      The following scatterplot shows the average <b>Engine Size</b> for cars with different number of <b>Cylinders (Cyl)</b>. Which of the following is the order of the number of Cylinders in decreasing order (from the highest to the lowest) of average Engine Size?<br />
 		  <input type="radio" name="answer" value="Wrong" /> 8, 9, 4, 12<br />
        	  <input type="radio" name="answer" value="Wrong" /> 8, 6, 5, 4 <br />
        	  <input type="radio" name="answer" value="Correct" /> 3, 5, 6, 8<br />
@@ -124,7 +126,7 @@
 	    </div>
        
         <div class='question' id="13">
-	      Following visualization shows the Dealer Cost for cars with different number of cylinders (e.g., 3 and 4). Please select False. <br />
+	      The following scatterplot shows the average <b>Engine Size</b> for cars with different number of <b>Cylinders (Cyl)</b>. Please select False. <br />
 		  <input type="radio" name="answer" value="Correct" /> False<br />
        	  <input type="radio" name="answer" value="Wrong" /> True<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
@@ -132,8 +134,8 @@
 	    </div>
 
         <div class='question' id="14">
-	      Following visualization shows the Horsepower for cars with different number of Widths. Which of the following shows ordered set of Widths based on their Horsepower (from the highest to the lowest)? <br />
-		  <input type="radio" name="answer" value="Correct" /> 81, 70, 65, 60 <br />
+	      The following line chart shows the average <b>Horsepower (HP)</b> for cars with different <b>Width Sizes</b>. Which of the following is the order of the Width sizes in decreasing order (from the highest to the lowest) of average Horsepower (HP)?<br />
+		  <input type="radio" name="answer" value="Correct" /> 81, 70, 60, 65 <br />
        	  <input type="radio" name="answer" value="Wrong" /> 77, 79, 80, 83<br />
        	  <input type="radio" name="answer" value="Wrong" /> 20, 30, 65, 75 <br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
@@ -142,17 +144,18 @@
 	    </div>
 
 	    <div class='question' id="15">
-	      Following visualization shows the City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). Which of the following shows ordered set of car types based on their City Miles Per Gallon (from the highest to the lowest)?<br />
+	      The following pie chart shows the average <b>City Miles Per Gallon</b> for 5 <b>types of cars (e.g., Sedan and SUV)</b>. Which of the following is the order of the types of cars in decreasing order (from the highest to the lowest) of average City Miles Per Gallon?<br />
 		    <input type="radio" name="answer" value="Correct" /> Sedan, Sports Car, SUV<br />
        	  <input type="radio" name="answer" value="Wrong" /> Sports Car, SUV, Sedan <br />
        	  <input type="radio" name="answer" value="Wrong" /> Minivan, Sports Car, SUV <br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
-		  <div id='vis'> </div>
+		  <div style="width:50%;  display: inline-block;" id='vis'> </div>
+		  <div style="float: right; width:50%; display: inline-block;" id='legend'> </div>
 	    </div>
        
         <div class='question' id="16">
-	       Following visualization shows the City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). Which of the following shows ordered set of car types based on their City Miles Per Gallon (from the highest to the lowest)?<br />
+	       The following table shows the average <b>City Miles Per Gallon</b> for 5 <b>types of cars (e.g., Sedan and SUV)</b>. Which of the following is the order of the types of cars in decreasing order (from the highest to the lowest) of average City Miles Per Gallon?<br />
 		  <input type="radio" name="answer" value="Wrong" /> Wagon, SUV, Sedan <br />
        	  <input type="radio" name="answer" value="Wrong" /> Sports car, Sedan, Minivan<br />
        	  <input type="radio" name="answer" value="Correct" /> Sports car, Minivan, SUV<br />
@@ -160,11 +163,9 @@
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
-          
-      
- 
+
 	     <div class='question' id="17">
-	      Following visualization shows the Dealer Cost for cars width different Wheel Base (e.g., 60 and 70). Which of the following shows ordered set of Wheel Bases based on their Dealer Cost (from the highest to the lowest)?<br />
+	      The following table shows the avergae <b>Dealer Cost</b> for cars width different <b>Wheel Base (e.g., 60 and 70)</b>. Which of the following is the order of the Wheel Bases in decreasing order (from the highest to the lowest) of average Dealer Cost?<br />
 		  <input type="radio" name="answer" value="Wrong" /> 93, 130, 122, 116<br />
        	  <input type="radio" name="answer" value="Correct" /> 101, 121, 123, 93<br />
        	  <input type="radio" name="answer" value="Wrong" /> 101, 121, 123, 89<br />
@@ -174,7 +175,7 @@
 	    </div>
        
         <div class='question' id="18">
-	       Following visualization shows the Dealer Cost for cars with different number of Cylinders (e.g., 3 and 4). Which of the following shows ordered set of Cylinders based on their Dealer Cost (from the highest to the lowest)?<br />
+	       The following bar chart shows the average <b>Dealer Cost</b> for cars with different number of <b>Cylinders (Cyl)</b>. Which of the following is the order of the number of Cylinders in decreasing order (from the highest to the lowest) of average Dealer Cost?<br />
 		  <input type="radio" name="answer" value="Wrong" /> 8, 9, 12<br />
        	  <input type="radio" name="answer" value="Correct" /> 8, 5, 3<br />
        	  <input type="radio" name="answer" value="Wrong" /> 5, 9, 8 <br />
@@ -184,7 +185,7 @@
 	    </div>
 
 	    <div class='question' id="19">
-	      Following visualization shows the Engine Size for cars with different number of cylinders (e.g., 3 and 4). Which of the following shows ordered set of Cylinders based on their Engine Size (from the highest to the lowest)? <br />
+	      The following table shows the average <b>Engine Size</b> for cars with different number of <b>Cylinders (Cyl)</b>. Which of the following is the order of the number of Cylinders in decreasing order (from the highest to the lowest) of average Engine Size?<br />
 		  <input type="radio" name="answer" value="Wrong" />  5, 4, 3, 9<br />
        	  <input type="radio" name="answer" value="Wrong" />  12, 8, 9, 6<br />
        	  <input type="radio" name="answer" value="Correct" /> 12, 8, 9, 3 <br />
@@ -194,29 +195,30 @@
 	    </div>
        
         <div class='question' id="20">
-	      Following visualization shows the Engine Size for cars with different Width (e.g., 66 and 73). Which of the following shows ordered set of Widths based on their Engine Size (from the highest to the lowest)?<br />
-		  <input type="radio" name="answer" value="Wrong" /> 74, 75, 68, 69 <br />
-       	  <input type="radio" name="answer" value="Correct" /> 81- 80, 76, 74 <br />
-       	  <input type="radio" name="answer" value="Wrong" /> 80, 77- 76, 81<br />
+	      The following bar chart shows the average <b>Retail Price</b> for cars with different <b>Wheel Base (e.g., 89 and 106)</b>. Which of the following is the order of the Wheel Bases in decreasing order (from the highest to the lowest) of average Retail Price?<br />
+		  <input type="radio" name="answer" value="Wrong" /> 122, 121, 114 <br />
+       	  <input type="radio" name="answer" value="Correct" /> 105, 104, 103 <br />
+       	  <input type="radio" name="answer" value="Wrong" /> 102, 101, 103<br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
         
 	    <div class='question' id="21">
-	      Following visualization shows the Retail Price for cars with different Wheel Base sizes (e.g., 123 and 130). Which of the following shows ordered set of Wheel Bases based on their Retail Price (from the highest to the lowest)?<br />
-		  <input type="radio" name="answer" value="Wrong" /> 103, 104, 99, 95 <br />
-       	  <input type="radio" name="answer" value="Correct" /> 123, 124, 95, 98<br />
-       	  <input type="radio" name="answer" value="Wrong" /> 123, 130, 124, 93 <br />
+	      The following pie chart shows the average <b>Engine Size</b> for cars with different <b>Width Sizes (e.g., 66 and 73)</b>. Which of the following is the order of the Width sizes in decreasing order (from the highest to the lowest) of average Engine Size?<br />
+		   <input type="radio" name="answer" value="Wrong" /> 74, 75, 68, 69 <br />
+       	  <input type="radio" name="answer" value="Correct" /> 81, 80, 76, 74 <br />
+       	  <input type="radio" name="answer" value="Wrong" /> 80, 77, 76, 81<br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
-		  <div id='vis'> </div>
+		  <div style="width:50%;  display: inline-block;" id='vis'> </div>
+		  <div style="float: right; width:50%; display: inline-block;" id='legend'> </div>
 	    </div>
 
 	     <div class='question' id="22">
-	      Following visualization shows the City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). Which of the following shows ordered set of car types based on their City Miles Per Gallon (from the highest to the lowest)?<br />
+	      The following line chart shows the average <b>City Miles Per Gallon</b> for 5 <b>types of cars (e.g., Sedan and SUV)</b>. Which of the following is the order of the types of cars in decreasing order (from the highest to the lowest) of average City Miles Per Gallon?<br />
 		  <input type="radio" name="answer" value="Wrong" />  Sedan, Minivan, Wagon<br />
-       	  <input type="radio" name="answer" value="Correct" /> Sedan, Minivan- SUV<br />
+       	  <input type="radio" name="answer" value="Correct" /> Sedan, Minivan, SUV<br />
        	  <input type="radio" name="answer" value="Wrong" /> Sports Car, Sedan, Minivan<br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
@@ -224,8 +226,7 @@
 	    </div>
        
         <div class='question' id="23">
-	       Following visualization shows the Horsepower for cars with different number of cylinders (e.g., 3 and 4). Which of the following shows ordered set of Cylinders based on their Horsepower (from the highest to the lowest) ? 
-	       <br />
+	       The following line chart shows the average <b>Horsepower (HP)</b> for cars with different number of <b>Cylinders (Cyl)</b>. Which of the following is the order of the number of Cylinders in decreasing order (from the highest to the lowest) of average Horsepower (HP)?<br />
 		   <input type="radio" name="answer" value="Wrong" /> 10, 9, 6, 5<br />
        	  <input type="radio" name="answer" value="Wrong" /> 5, 6, 9, 12<br />
        	  <input type="radio" name="answer" value="Correct" /> 12, 8, 6, 3 <br />
@@ -235,7 +236,7 @@
 	    </div>
 
 	    <div class='question' id="24">
-	      Following visualization shows the Horsepower for cars with different width (e.g., 66 and 73). Please select False. <br />
+	      The following bar chart shows the Horsepower (HP) for cars with different <b>Width (e.g., 66 and 73)</b>. Please select False. <br />
 		  <input type="radio" name="answer" value="Correct" /> False<br />
        	  <input type="radio" name="answer" value="Wrong" /> True<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />

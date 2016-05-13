@@ -5,58 +5,75 @@
 </head>
 <body>
 
-  	<div class='question' id="1">
-	      Following visualization shows the average Highway Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). Which type of cars stand out in terms of Highway Miles Per Gallon?<br />
-		  <input type="radio" name="answer" value="trial" /> Sedan<br />
-       	  <input type="radio" name="answer" value="trial" /> SUV<br />
-       	  <input type="radio" name="answer" value="trial" /> Sports Car<br />
-       	  <input type="radio" name="answer" value="trial" /> This question cannot be answered using the visualization below.<br/><br/>
+    <div class='question instruction' id="1">
+		  <h3> <font color="red">NOTE:</font> To ensure best performance, we suggest you to run the study in full screen mode. Kindly DO NOT refresh the page during the session. </h3>
+	      Durign the trial session, you will be asked to go through 5 questions. Please try to use the given charts to answer these questions as accurate as possible. Press <b>"Start Trial Session"</b> when you are ready to start.<br /><br />
+       	  <input type="submit" value="Start Trial Session" onclick="showNextQ()" /> <br />
+	</div>
+  	<div class='question' id="2">
+	      The following table shows the average <b>Highway Miles Per Gallon</b> for 5 <b>types of cars (e.g., Sedan and SUV)</b>. Which type of car looks to have an unnormal average Highway Miles Per Gallon?<br />
+	      <p id="Answer"></p>
+		  <input type="radio" name="answer" value="Wrong" /> Sedan<br />
+       	  <input type="radio" name="answer" value="Correct" /> SUV<br />
+       	  <input type="radio" name="answer" value="Wrong" /> Sports Car<br />
+       	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="2">
-	      Following visualization shows the average Retail Price for cars with different number of cylinders (e.g., 3 and 4). Is there an exception in the value of cylinder? <br />
-		  <input type="radio" name="answer" value="trial" /> yes 8<br />
-       	  <input type="radio" name="answer" value="trial" /> yes -1 <br />
-       	  <input type="radio" name="answer" value="trial" /> yes 6 <br />
-       	  <input type="radio" name="answer" value="trial" /> This question cannot be answered using the visualization below.<br/><br/>
+        <div class='question' id="3">
+	      The following pie chart shows the average <b>Retail Price</b> for cars with different number of <b>Cylinders (e.g., 3 and 4)</b> (a legend is on the right side). Which number of Cylinder looks to be unnormal?<br />
+	      <p id="Answer"></p>
+		  <input type="radio" name="answer" value="Wrong" /> 8<br />
+       	  <input type="radio" name="answer" value="Correct" /> -1 <br />
+       	  <input type="radio" name="answer" value="Wrong" /> 6 <br />
+       	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
-		  <div id='vis'> </div>
+		  <div style="width:50%;  display: inline-block;" id='vis'> </div>
+		  <div style="float: right; width:50%; display: inline-block;" id='legend'> </div>
 	    </div>
 
-	    <div class='question' id="3">
-	      Following visualization shows the average Highway Miles Per Gallon for 5 types of cars (e.g., Sedan, and SUV). Which type of cars stand out in terms of Highway Miles Per Gallon?<br />
-		  <input type="radio" name="answer" value="trial" /> Wagon<br />
-       	  <input type="radio" name="answer" value="trial" /> SUV<br />
-       	  <input type="radio" name="answer" value="trial" /> Minivan<br />
-       	  <input type="radio" name="answer" value="trial" /> This question cannot be answered using the visualization below.<br/><br/>
+	    <div class='question' id="4">
+	      The following bar chart shows the average <b>Highway Miles Per Gallon</b> for 5 <b>types of cars (e.g., Sedan, and SUV)</b>. Which type of car looks to have an unnormal average Highway Miles Per Gallon?<br />
+	      <p id="Answer"></p>
+		  <input type="radio" name="answer" value="Wrong" /> Wagon<br />
+       	  <input type="radio" name="answer" value="Wrong" /> Sedan<br />
+       	  <input type="radio" name="answer" value="Correct" /> SUV<br />
+       	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="4">
-	       Following visualization shows the average weitght for cars width different widths (e.g., 60 and 70). Which value of width does not sound to be normal?<br />
-		  <input type="radio" name="answer" value="trial" /> 0<br />
-       	  <input type="radio" name="answer" value="trial" /> 65<br />
-       	  <input type="radio" name="answer" value="trial" /> 80<br />
-       	  <input type="radio" name="answer" value="trial" /> This question cannot be answered using the visualization below.<br/><br/>
-       	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
-		  <div id='vis'> </div>
-	    </div>
-
-	    <div class='question' id="5">
-	      Following visualization shows the average Highway Miles Per Gallon for cars with different number of cylinders (e.g., 3 and 4). Is there an exception in the value of cylinder? <br />
-		  <input type="radio" name="answer" value="trial" /> yes 6<br />
-       	  <input type="radio" name="answer" value="trial" /> yes -1 <br />
-       	  <input type="radio" name="answer" value="trial" /> yes 4 <br />
-       	  <input type="radio" name="answer" value="trial" /> This question cannot be answered using the visualization below.<br/><br/>
+        <div class='question' id="5">
+	       The following line chart shows the average <b>Weight</b> for cars with different <b>Widths (e.g., 60 and 70)</b>. Which Width size looks to be unnormal?<br />
+	       <p id="Answer"></p>
+		  <input type="radio" name="answer" value="Correct" /> 0<br />
+       	  <input type="radio" name="answer" value="Wrong" /> 65<br />
+       	  <input type="radio" name="answer" value="Wrong" /> 80<br />
+       	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
 
 	    <div class='question' id="6">
-	      Following visualization shows the average City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). Average City Miles Per Gallon for which type of cars do not look normal?<br />
+	      The following scatterplot shows the average <b>Highway Miles Per Gallon</b> for cars with different number of <b>Cylinders (e.g., 3 and 4)</b>. Which number of Cylinder looks to be unnormal?<br />
+	      <p id="Answer"></p>
+		  <input type="radio" name="answer" value="Wrong" /> 6<br />
+       	  <input type="radio" name="answer" value="Correct" /> -1 <br />
+       	  <input type="radio" name="answer" value="Wrong" /> 4 <br />
+       	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
+       	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
+		  <div id='vis'> </div>
+	    </div>
+        
+        <div class='question instruction' id="7">
+	       <p>Thank You. You completed the Trial Session.</p>  
+	        Now is the time to start the main experiment. Similar to the trial session, in the main experiment you will be asked to complete about 20 questions. However, in the main experiment after answering each question and pressing the "Submit" button you cannot edit your answer. So, please answer the questions <b>as accurate as possible</b> and press "Submit" button only when you are sure about your answer. Press <b>"Start"</b> when you are ready to start the main experiment.<br /><br />
+       	  <input type="submit" value="Start" onclick="showNextQ()" /> <br />
+	    </div>
+
+	    <div class='question' id="8">
+	      The following visualization shows the average <b>City Miles Per Gallon</b> for 5 <b>types of cars (e.g., Sedan and SUV)</b>. Which type of car looks to have an unnormal average City Miles Per Gallon?<br />
 		  <input type="radio" name="answer" value="Wrong" /> Sedan<br />
        	  <input type="radio" name="answer" value="Wrong" /> SUV<br />
        	  <input type="radio" name="answer" value="Correct" /> Wagon<br />
@@ -65,19 +82,20 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="7">
-	      Following visualization shows the average weight for cars with different number of cylinders (e.g., 3 and 4). Is there an exception in the value of cylinder?
+        <div class='question' id="9">
+	      The following visualization shows the average <b>Weight</b> for cars with different number of <b>Cylinders (e.g., 3 and 4)</b>. Which number of Cylinder looks to be unnormal?
 	       <br />
 		   <input type="radio" name="answer" value="Wrong" /> 4 <br />
        	  <input type="radio" name="answer" value="Wrong" /> 5<br />
        	  <input type="radio" name="answer" value="Correct" /> -1 <br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
-		  <div id='vis'> </div>
+		  <div style="width:50%;  display: inline-block;" id='vis'> </div>
+		  <div style="float: right; width:50%; display: inline-block;" id='legend'> </div>
 	    </div>
 
-	    <div class='question' id="8">
-	      Following visualization shows the average City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). Average City Miles Per Gallon for which type of cars do not look normal?<br />
+	    <div class='question' id="10">
+	      The following visualization shows the average <b>City Miles Per Gallon</b> for 5 <b>types of cars (e.g., Sedan and SUV)</b>. Which type of car looks to have an unnormal average City Miles Per Gallon?<br />
 		  <input type="radio" name="answer" value="Correct" /> Wagon<br />
        	  <input type="radio" name="answer" value="Wrong" /> SUV<br />
        	  <input type="radio" name="answer" value="Wrong" /> Sports Car<br />
@@ -86,8 +104,8 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="9">
-	      Following visualization shows the average Dealer Cost Per Gallon for cars width different Wheel Base (e.g., 60 and 70). Which Wheel Base does not sound to be normal?<br />
+        <div class='question' id="11">
+	      The following visualization shows the average <b>Dealer Cost</b> for cars with different <b>Wheel Base (e.g., 60 and 70)</b>. Which Wheel Base size does not look to be normal?<br />
 		  <input type="radio" name="answer" value="Wrong" /> 110 <br />
        	  <input type="radio" name="answer" value="Correct" /> 0<br />
        	  <input type="radio" name="answer" value="Wrong" /> 90<br />
@@ -96,46 +114,47 @@
 		  <div id='vis'> </div>
 	    </div>
     
-	     <div class='question' id="10">
-	      Following visualization shows the average Engine Size for cars with different number of cylinders (e.g., 4 and 6). Which width does not sound to be normal? <br />
-		  <input type="radio" name="answer" value="Wrong" /> 80 <br />
-       	  <input type="radio" name="answer" value="Wrong" />60<br />
-       	  <input type="radio" name="answer" value="Correct" /> 0 <br />
+	     <div class='question' id="12">
+	      The following scatterplot shows the average <b>Horsepower (HP)</b> for cars with different <b>Width sizes (e.g., 66 and 73)</b>. Which Width size does not look to be normal?<br />
+		  <input type="radio" name="answer" value="Wrong" /> 70 <br />
+       	  <input type="radio" name="answer" value="Wrong" /> 80<br />
+       	  <input type="radio" name="answer" value="Correct" /> 2 <br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="11">
-	      Following visualization shows the average Dealer Cost for cars with different number of cylinders (e.g., 3 and 4). Please select True. <br />
+        <div class='question' id="13">
+	      The following visualization shows the average <b>Dealer Cost</b> for cars with different number of <b>Cylinders (e.g., 3 and 4)</b>. Please select True. <br />
 		  <input type="radio" name="answer" value="Wrong" /> False<br />
        	  <input type="radio" name="answer" value="Correct" /> True<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
 
-        <div class='question' id="12">
-	      Following visualization shows the average Engine Size for cars with different number of cylinders (e.g., 4 and 6). Is there an exception in the value of cylinder? <br />
-		  <input type="radio" name="answer" value="Correct" /> Yes, -1<br />
-       	  <input type="radio" name="answer" value="Wrong" /> Yes, 4<br />
-       	  <input type="radio" name="answer" value="Wrong" /> Yes, 6<br />
-       	  <input type="radio" name="answer" value="Wrong" /> No <br/><br/>
+        <div class='question' id="14">
+	      The following line chart shows the average <b>Engine Size</b> for cars with different number of <b>Cylinders (e.g., 4 and 6)</b>. Which number of Cylinder looks to be unnormal?<br />
+		  <input type="radio" name="answer" value="Correct" /> -1<br />
+       	  <input type="radio" name="answer" value="Wrong" /> 4<br />
+       	  <input type="radio" name="answer" value="Wrong" /> 6<br />
+       	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below. <br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
 
-	    <div class='question' id="13">
-	      Following visualization shows the average City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). Average City Miles Per Gallon for which type of cars do not look normal?<br />
+	    <div class='question' id="15">
+	      The following pie chart shows the average <b>City Miles Per Gallon</b> for 5 <b>types of cars (e.g., Sedan and SUV)</b>. Which type of car looks to have an unnormal average City Miles Per Gallon? <br />
 		  <input type="radio" name="answer" value="Correct" /> Wagon<br />
        	  <input type="radio" name="answer" value="Wrong" /> SUV<br />
        	  <input type="radio" name="answer" value="Wrong" /> Sports Car<br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
-		  <div id='vis'> </div>
+       	  <div style="width:50%;  display: inline-block;" id='vis'> </div>
+		  <div style="float: right; width:50%; height: auto; display: inline-block;" id='legend'> </div>
 	    </div>
        
-        <div class='question' id="14">
-	       Following visualization shows the average City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). Average City Miles Per Gallon for which type of cars do not look normal?<br />
+        <div class='question' id="16">
+	       The following table shows the average <b>City Miles Per Gallon</b> for 5 <b>types of cars (e.g., Sedan and SUV)</b>. Which type of car looks to have an unnormal average City Miles Per Gallon?<br />
 		  <input type="radio" name="answer" value="Wrong" /> Sedan <br />
        	  <input type="radio" name="answer" value="Correct" /> Wagon<br />
        	  <input type="radio" name="answer" value="Wrong" /> Sports Car<br />
@@ -146,8 +165,8 @@
           
       
  
-	     <div class='question' id="15">
-	      Following visualization shows the average Dealer Cost Per Gallon for cars width different Wheel Base (e.g., 60 and 70). Which Wheel Base does not sound to be normal?<br />
+	     <div class='question' id="17">
+	      The following table shows the average <b>Dealer Cost</b> Per for cars with different <b>Wheel Base (e.g., 60 and 70)</b>. Which Wheel Base size does not look to be normal?<br />
 		  <input type="radio" name="answer" value="Wrong" /> 110 <br />
        	  <input type="radio" name="answer" value="Correct" /> 0<br />
        	  <input type="radio" name="answer" value="Wrong" /> 90<br />
@@ -156,28 +175,28 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="16">
-	       Following visualization shows the average Dealer Cost for cars with different number of cylinders (e.g., 3 and 4). Is there an exception in the value of cylinder? <br />
-		  <input type="radio" name="answer" value="Wrong" /> yes 8<br />
-       	  <input type="radio" name="answer" value="Correct" /> yes -1 <br />
-       	  <input type="radio" name="answer" value="Wrong" /> yes 6 <br />
+        <div class='question' id="18">
+	       The following bar chart shows the average <b>Dealer Cost</b> for cars with different number of <b>Cylinders (e.g., 3 and 4)</b>. Which number of Cylinder looks to be unnormal?<br />
+		  <input type="radio" name="answer" value="Wrong" /> 8<br />
+       	  <input type="radio" name="answer" value="Correct" /> -1 <br />
+       	  <input type="radio" name="answer" value="Wrong" /> 6 <br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
 
-	    <div class='question' id="17">
-	      Following visualization shows the average Engine Size for cars with different number of cylinders (e.g., 3 and 4). Is there an exception in the value of cylinder? <br />
-		  <input type="radio" name="answer" value="Wrong" /> yes 8<br />
-       	  <input type="radio" name="answer" value="Correct" /> yes -1 <br />
-       	  <input type="radio" name="answer" value="Wrong" /> yes 6 <br />
+	    <div class='question' id="19">
+	      The following table shows the average <b>Engine Size</b> for cars with different number of <b>Cylinders (e.g., 3 and 4)</b>. Which number of Cylinder looks to be unnormal?<br />
+		  <input type="radio" name="answer" value="Wrong" /> 8<br />
+       	  <input type="radio" name="answer" value="Correct" /> -1 <br />
+       	  <input type="radio" name="answer" value="Wrong" /> 6 <br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="18">
-	      Following visualization shows the average Engine Size for cars with different width (e.g., 66 and 73). Which Width does not sound to be normal?<br />
+        <div class='question' id="20">
+	      The following bar chart shows the average <b>Engine Size</b> for cars with different <b>Width sizes (e.g., 66 and 73)</b>. Which Width size does not look to be normal?<br />
 		  <input type="radio" name="answer" value="Wrong" /> 70<br />
        	  <input type="radio" name="answer" value="Correct" /> 2<br />
        	  <input type="radio" name="answer" value="Wrong" /> 64<br />
@@ -186,18 +205,19 @@
 		  <div id='vis'> </div>
 	    </div>
         
-	    <div class='question' id="19">
-	      Following visualization shows the average Retail Price for cars with different Wheel Base sizes (e.g., 123 and 130). Which Wheel Base size does not sound to be normal?<br />
+	    <div class='question' id="21">
+	      The following pie chart shows the average <b>Retail Price</b> for cars with different <b>Withds(e.g., 65 and 80)</b>. Which Width size does not sound to be normal?<br />
 		  <input type="radio" name="answer" value="Wrong" /> 130<br />
        	  <input type="radio" name="answer" value="Correct" /> 0<br />
        	  <input type="radio" name="answer" value="Wrong" /> 124<br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
-		  <div id='vis'> </div>
+		  <div style="width:50%;  display: inline-block;" id='vis'> </div>
+		  <div style="float: right; width:50%; display: inline-block;" id='legend'> </div>
 	    </div>
 
-	     <div class='question' id="20">
-	      Following visualization shows the average City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). Which type of cars stand out in terms of City Miles Per Gallon?<br />
+	     <div class='question' id="22">
+	      The following line chart shows the average <b>City Miles Per Gallon</b> for 5 <b>types of cars (e.g., Sedan and SUV)</b>. Which type of car looks to have an unnormal average City Miles Per Gallon?<br />
 		  <input type="radio" name="answer" value="Wrong" /> Sedan<br />
        	  <input type="radio" name="answer" value="Correct" /> Wagon<br />
        	  <input type="radio" name="answer" value="Wrong" /> Sports Car<br />
@@ -206,9 +226,8 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="21">
-	       Following visualization shows the average Horsepower for cars with different number of cylinders (e.g., 3 and 4). Which number of cylinders do not look to be normal? 
-	       <br />
+        <div class='question' id="23">
+	       The following line chart shows the average <b>Horsepower (HP)</b> for cars with different number of <b>Cylinders (e.g., 3 and 4)</b>. Which number of Cylinder looks to be unnormal?<br />
 		   <input type="radio" name="answer" value="Wrong" /> 4 <br />
        	  <input type="radio" name="answer" value="Wrong" /> 5<br />
        	  <input type="radio" name="answer" value="Correct" /> -1 <br />
@@ -217,16 +236,16 @@
 		  <div id='vis'> </div>
 	    </div>
 
-	    <div class='question' id="22">
-	      Following visualization shows the average Horsepower for cars with different width (e.g., 66 and 73). Please select False. <br />
+	    <div class='question' id="24">
+	      The following bar chart shows the average <b>Horsepower (HP)</b> for cars with different <b> Width size (e.g., 66 and 73)</b>. Please select False. <br />
 		  <input type="radio" name="answer" value="Correct" /> False<br />
        	  <input type="radio" name="answer" value="Wrong" /> True<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
 
- 	    <div class="question ranking" id="23">
-	      All following visualizations show the average Highway Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). Suppose you are asked to find the type of cars that stand out in terms of Highway Miles Per Gallon. Rank the below visualizations in the order of preference for performing this task? <b>(1 being the most useful to 5 being least useful) </b><br /><br />
+ 	    <div class="question ranking" id="25">
+	      All following visualizations show the average Highway Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). Suppose you are asked to find the type of car that does not look to have a normal Highway Miles Per Gallon. Rank the below visualizations in the order of preference for performing this task? <b>(1 being the most useful to 5 being least useful) </b><br /><br />
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br /><br />
 		  
 		  <div style="margin-bottom: 10px; height:400;">
@@ -288,8 +307,8 @@
 	      </div>
 	    </div>
 
-	    <div class="question ranking" id="24">
-	      All following visualizations show the average length for 8 types of cylinders (e.g., 3, 4). Suppose you are asked to find the number of cylinders that do not sound to be normal. Rank the below visualizations in the order of preference for performing this task? <b>(1 being the most useful to 5 being least useful) </b><br /><br />
+	    <div class="question ranking" id="26">
+	      All following visualizations show the average length for 8 types of cylinders (e.g., 3, 4). Suppose you are asked to find the number of Cylinder that do not look to be normal. Rank the below visualizations in the order of preference for performing this task? <b>(1 being the most useful to 5 being least useful) </b><br /><br />
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br /><br />
 	     <div style="margin-bottom: 10px; height:400;">
 			    <div style="float: right; width:50%; display: inline-block;" id="vis1">  
@@ -351,8 +370,8 @@
 	      </div>
 	    </div>
 
-		<div class="question ranking" id="25">
-	      All following visualizations show the average Dealer cost for cars with different width size (e.g., 10, 20). Suppose you are asked to find the type of cars that stand out in terms of width size. Rank the below visualizations in the order of preference for performing this task? <b>(1 being the most useful to 5 being least useful) </b><br /><br />
+		<div class="question ranking" id="27">
+	      All following visualizations show the average Dealer cost for cars with different width size (e.g., 10, 20). Suppose you are asked to find the type of cars that does not look to have a Width size. Rank the below visualizations in the order of preference for performing this task? <b>(1 being the most useful to 5 being least useful) </b><br /><br />
        	  <input type="submit" value="Submit" onclick="showNextQ(); saveAnswers();" /> <br /><br />
 		  <div style="margin-bottom: 10px; height:400;">
 			    <div style="float: right; width:50%; display: inline-block;" id="vis1">  
@@ -414,7 +433,7 @@
 	      </div>
 	    </div>
    
-	   <div  class="question" id="26">
+	   <div  class="question" id="28">
 		  <h3>End of the study </h3> <br />
 		  <p>
 		  Thank you for participating.<br />
