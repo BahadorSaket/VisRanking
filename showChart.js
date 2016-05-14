@@ -1136,6 +1136,7 @@
 	        }
 
             else if(set == "Retrieve"){
+         
 				if(currentQ == 2){
 					questionID = "Trial";
 	        		dataVisualizer.drawTable(data,"Type","Highway Miles Per Gallon","#vis",400);

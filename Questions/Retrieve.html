@@ -11,50 +11,56 @@
  	 </div>
   	<div class='question' id="2">
 	      The following chart shows the Highway Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). How much is the Highway Miles Per Gallon for SUV?<br />
-		  <input type="radio" name="answer" value="trial" /> 29.40<br />
-       	  <input type="radio" name="answer" value="trial" /> 1.54<br />
-       	  <input type="radio" name="answer" value="trial" /> 27.79<br />
-       	  <input type="radio" name="answer" value="trial" /> This question cannot be answered using the visualization below.<br/><br/>
+	      <p id="Answer"></p>
+		  <input type="radio" name="answer" value="Wrong" /> 29.40<br />
+       	  <input type="radio" name="answer" value="Correct" /> 1.54<br />
+       	  <input type="radio" name="answer" value="Wrong" /> 27.79<br />
+       	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
        
         <div class='question' id="3">
 	      The following chart shows the Retail Price for cars with different number of Cylinders (e.g., 3 and 4). How much is the Retail Price for Cylinder 12?<br />
-		  <input type="radio" name="answer" value="trial" />  37187 <br />
-       	  <input type="radio" name="answer" value="trial" />  19110<br />
-       	  <input type="radio" name="answer" value="trial" />  127545 <br />
-       	  <input type="radio" name="answer" value="trial" /> This question cannot be answered using the visualization below.<br/><br/>
+	      <p id="Answer"></p>
+		  <input type="radio" name="answer" value="Wrong" /> 37187 <br />
+       	  <input type="radio" name="answer" value="Wrong" /> 19110<br />
+       	  <input type="radio" name="answer" value="Correct" /> 127545 <br />
+       	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
-		  <div id='vis'> </div>
+		   <div style="width:50%;  display: inline-block;" id='vis'> </div>
+		  <div style="float: right; width:50%; display: inline-block;" id='legend'> </div>
 	    </div>
 
 	    <div class='question' id="4">
 	      The following chart shows the Highway Miles Per Gallon for 5 types of cars (e.g., Sedan, and SUV). How much is the Highway Miles Per Gallon for Wagon?  <br />
-		  <input type="radio" name="answer" value="trial" /> About 26<br />
-       	  <input type="radio" name="answer" value="trial" /> About 32<br />
-       	  <input type="radio" name="answer" value="trial" /> About 15<br />
-       	  <input type="radio" name="answer" value="trial" /> This question cannot be answered using the visualization below.<br/><br/>
+	      <p id="Answer"></p>
+		  <input type="radio" name="answer" value="Correct" /> About 26<br />
+       	  <input type="radio" name="answer" value="Wrong" /> About 32<br />
+       	  <input type="radio" name="answer" value="Wrong" /> About 15<br />
+       	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
        
         <div class='question' id="5">
 	       The following chart shows the Weitght for cars width different Widths (e.g., 60 and 70). How much is the Weight for Width 80?<br />
-		  <input type="radio" name="answer" value="trial" /> About 4400<br />
-       	  <input type="radio" name="answer" value="trial" /> About 4000<br />
-       	  <input type="radio" name="answer" value="trial" /> About 4600<br />
-       	  <input type="radio" name="answer" value="trial" /> This question cannot be answered using the visualization below.<br/><br/>
+	       <p id="Answer"></p>
+		  <input type="radio" name="answer" value="Correct" /> About 4400<br />
+       	  <input type="radio" name="answer" value="Wrong" /> About 4000<br />
+       	  <input type="radio" name="answer" value="Wrong" /> About 4600<br />
+       	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
 
 	    <div class='question' id="6">
 	      The following chart shows the Highway Miles Per Gallon for cars with different number of cylinders (e.g., 3 and 4). How much is the Highway Miles Per Gallon for Cylinder 6?<br />
-		  <input type="radio" name="answer" value="trial" /> 12<br />
-       	  <input type="radio" name="answer" value="trial" /> 20 <br />
-       	  <input type="radio" name="answer" value="trial" /> 35 <br />
-       	  <input type="radio" name="answer" value="trial" /> This question cannot be answered using the visualization below.<br/><br/>
+	      <p id="Answer"></p>
+		  <input type="radio" name="answer" value="Wrong" /> 12<br />
+       	  <input type="radio" name="answer" value="Correct" /> 20 <br />
+       	  <input type="radio" name="answer" value="Wrong" /> 35 <br />
+       	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
@@ -83,7 +89,8 @@
        	  <input type="radio" name="answer" value="Correct" /> 1850 <br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
-		  <div id='vis'> </div>
+		   <div style="width:50%;  display: inline-block;" id='vis'> </div>
+		  <div style="float: right; width:50%; display: inline-block;" id='legend'> </div>
 	    </div>
 
 	    <div class='question' id="10">
@@ -141,7 +148,8 @@
        	  <input type="radio" name="answer" value="Wrong" /> 54<br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
-		  <div id='vis'> </div>
+		   <div style="width:50%;  display: inline-block;" id='vis'> </div>
+		  <div style="float: right; width:50%; display: inline-block;" id='legend'> </div>
 	    </div>
        
         <div class='question' id="16">
@@ -201,7 +209,8 @@
        	  <input type="radio" name="answer" value="Wrong" /> 13000<br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
-		  <div id='vis'> </div>
+		   <div style="width:50%;  display: inline-block;" id='vis'> </div>
+		  <div style="float: right; width:50%; display: inline-block;" id='legend'> </div>
 	    </div>
 
 	     <div class='question' id="22">
