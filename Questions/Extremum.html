@@ -4,9 +4,14 @@
 
 </head>
 <body>
-
-  	<div class='question' id="1">
-	     Following visualization shows the Highway Miles Per Gallon for 5 types of cars (e.g., Sedan, and SUV). Which type of car has the highest Highway Miles per Gallon? <br />
+    <div class='question instruction' id="1">
+		      <h3> <font color="red">NOTE:</font> To ensure best performance, we suggest you to run the study in full screen mode. Kindly DO NOT refresh the page during the session. </h3>
+		      During the training session, you will be asked to go through 5 questions. Please try to use the given charts to answer these questions as accurate as possible. Press <b>"Start Training Session"</b> when you are ready to start.<br /><br />
+	       	  <input type="submit" value="Start Training Session" onclick="showNextQ()" /> <br />
+    </div>
+  	<div class='question' id="2">
+	     The following chart shows the Highway Miles Per Gallon for 5 types of cars (e.g., Sedan, and SUV). Which type of car has the highest Highway Miles per Gallon? <br />
+	      <p id="Answer"></p>
 		  <input type="radio" name="answer" value="trial" /> Sedan<br />
        	  <input type="radio" name="answer" value="trial" /> SUV<br />
        	  <input type="radio" name="answer" value="trial" /> Sports Car<br />
@@ -15,8 +20,9 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="2">
-	      Following visualization shows the Dealer Cost for 5 types of cars (e.g., Sedan, and SUV). Which type of car has the lowest Dealer Cost? <br />
+        <div class='question' id="3">
+	      The following chart shows the Dealer Cost for 5 types of cars (e.g., Sedan, and SUV). Which type of car has the lowest Dealer Cost? <br />
+	       <p id="Answer"></p>
 		  <input type="radio" name="answer" value="trial" /> Sedan<br />
        	  <input type="radio" name="answer" value="trial" /> SUV<br />
        	  <input type="radio" name="answer" value="trial" /> Minivan<br />
@@ -25,18 +31,21 @@
 		  <div id='vis'> </div>
 	    </div>
 
-	     <div class='question' id="3">
-	      Following visualization shows the Retail Price for cars with different Widths (e.g., 3 and 4). Which car Width has the highest Retail Price? <br />
+	     <div class='question' id="4">
+	      The following chart shows the Retail Price for cars with different Widths (e.g., 3 and 4). Which car Width has the highest Retail Price? <br />
+	       <p id="Answer"></p>
 		  <input type="radio" name="answer" value="trial" /> 81<br />
        	  <input type="radio" name="answer" value="trial" /> 80<br />
        	  <input type="radio" name="answer" value="trial" /> 71 <br />
        	  <input type="radio" name="answer" value="trial" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
-		  <div id='vis'> </div>
+		  <div style="width:50%;  display: inline-block;" id='vis'> </div>
+		  <div style="float: right; width:50%; display: inline-block;" id='legend'> </div>
 	    </div>
        
-        <div class='question' id="4">
-	       Following visualization shows the Retail Price for cars with different number of cylinders (e.g., 3 and 4). Which car Cylinder has the lowest Retail Price?<br />
+        <div class='question' id="5">
+	       The following chart shows the Retail Price for cars with different number of cylinders (e.g., 3 and 4). Which car Cylinder has the lowest Retail Price?<br />
+	        <p id="Answer"></p>
 		  <input type="radio" name="answer" value="trial" /> 4<br />
        	  <input type="radio" name="answer" value="trial" /> 3<br />
        	  <input type="radio" name="answer" value="trial" /> 12<br />
@@ -46,8 +55,9 @@
 	    </div>
 
 	
-        <div class='question' id="5">
-         Following visualization shows the Retail Price for cars with different Widths. Which car Width has the highest Retail Price?<br />
+        <div class='question' id="6">
+         The following chart shows the Retail Price for cars with different Widths. Which car Width has the highest Retail Price?<br />
+          <p id="Answer"></p>
 		  <input type="radio" name="answer" value="trial" /> 81<br />
        	  <input type="radio" name="answer" value="trial" /> 80<br />
        	  <input type="radio" name="answer" value="trial" /> 81<br />
@@ -56,9 +66,14 @@
 		  <div id='vis'> </div>
 	    </div>
 
-	    <div class='question' id="6">
-	      Following visualization shows the City Miles Per Gallon for 5 types of cars (e.g., Sedan, and SUV). Which type of car has the Highest City Miles per Gallon?
-	       <br />
+	     <div class='question instruction' id="7">
+	       <p>Thank You. You completed the Trial Session.</p>  
+	        Now is the time to start the main experiment. Similar to the trial session, in the main experiment you will be asked to complete about 20 questions. However, in the main experiment after answering each question and pressing the "Submit" button you cannot edit your answer. You will not receive any feedback to show you correct or wrong answers during this session. So, please answer the questions <b>as accurate as possible</b> and press "Submit" button only when you are sure about your answer. Press <b>"Start"</b> when you are ready to start the main experiment.<br /><br />
+       	  <input type="submit" value="Start" onclick="showNextQ()" /> <br />
+	    </div>
+
+	    <div class='question' id="8">
+	      The following chart shows the City Miles Per Gallon for 5 types of cars (e.g., Sedan, and SUV). Which type of car has the Highest City Miles per Gallon?<br />
 		  <input type="radio" name="answer" value="Wrong" /> Sedan<br />
        	  <input type="radio" name="answer" value="Correct" /> Wagon<br />
        	  <input type="radio" name="answer" value="Wrong" /> Minivan<br />
@@ -67,9 +82,8 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="7">
-	      Following visualization shows the Dealer Cost for cars with different Wheel Bases. Which car Wheel Base has the lowest Dealer Cost?
-	       <br />
+        <div class='question' id="9">
+	      The following chart shows the Dealer Cost for cars with different Wheel Bases. Which car Wheel Base has the lowest Dealer Cost? <br />
 		   <input type="radio" name="answer" value="Correct" /> 102 <br />
        	  <input type="radio" name="answer" value="Wrong" /> 103 <br />
        	  <input type="radio" name="answer" value="Wrong" /> 16  <br />
@@ -78,8 +92,8 @@
 		  <div id='vis'> </div>
 	    </div>
 
-	    <div class='question' id="8">
-	       Following visualization shows the Horsepower for cars with different Widths. Which car Width has the highest Horsepower?  <br />
+	    <div class='question' id="10">
+	       The following chart shows the Horsepower for cars with different Widths. Which car Width has the highest Horsepower?  <br />
 		  <input type="radio" name="answer" value="Wrong" /> 83<br />
        	  <input type="radio" name="answer" value="Correct" /> 81<br />
        	  <input type="radio" name="answer" value="Wrong" /> 80<br />
@@ -88,8 +102,8 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="9">
-	      Following visualization shows the Horsepower for cars with different number of cylinders (e.g., 3 and 4). Which car Cylinder has the highest Horsepower? <br />
+        <div class='question' id="11">
+	      The following chart shows the Horsepower for cars with different number of cylinders (e.g., 3 and 4). Which car Cylinder has the highest Horsepower? <br />
 		  <input type="radio" name="answer" value="Wrong" /> 11 <br />
        	  <input type="radio" name="answer" value="Correct" /> 12<br />
        	  <input type="radio" name="answer" value="Wrong" /> 10<br />
@@ -98,26 +112,27 @@
 		  <div id='vis'> </div>
 	    </div>
     
-	     <div class='question' id="10">
-	       Following visualization shows the Weight for cars with different number of cylinders (e.g., 3 and 4). Which car Cylinder has the lowest Weight? <br />
+	     <div class='question' id="12">
+	       The following chart shows the Weight for cars with different number of cylinders (e.g., 3 and 4). Which car Cylinder has the lowest Weight? <br />
 		  <input type="radio" name="answer" value="Wrong" /> 4<br />
        	  <input type="radio" name="answer" value="Wrong" /> -1<br />
        	  <input type="radio" name="answer" value="Correct" /> 3<br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
-		  <div id='vis'> </div>
+		  <div style="width:50%;  display: inline-block;" id='vis'> </div>
+		  <div style="float: right; width:50%; display: inline-block;" id='legend'> </div>
 	    </div>
        
-        <div class='question' id="11">
-	      Following visualization shows the Dealer Cost for cars with different number of cylinders (e.g., 3 and 4). Please select True. <br />
+        <div class='question' id="13">
+	      The following chart shows the Dealer Cost for cars with different number of cylinders (e.g., 3 and 4). Please select True. <br />
 		  <input type="radio" name="answer" value="Wrong" /> False<br />
        	  <input type="radio" name="answer" value="Correct" /> True<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
 
-        <div class='question' id="12">
-	      Following visualization shows the Engine Size for cars with different number of cylinders (e.g., 4 and 6). Which car Cylinder has the highest Engine Size? <br />
+        <div class='question' id="14">
+	      The following chart shows the Engine Size for cars with different number of cylinders (e.g., 4 and 6). Which car Cylinder has the highest Engine Size? <br />
 		  <input type="radio" name="answer" value="Wrong" /> 4<br />
        	  <input type="radio" name="answer" value="Wrong" /> 8<br />
        	  <input type="radio" name="answer" value="Correct" /> 12<br />
@@ -126,8 +141,8 @@
 		  <div id='vis'> </div>
 	    </div>
 
-	    <div class='question' id="13">
-	      Following visualization shows the Length for cars with different number of cylinders (e.g., 4 and 6). Which car Cylinder has the highest Length? <br />
+	    <div class='question' id="15">
+	      The following chart shows the Length for cars with different number of cylinders (e.g., 4 and 6). Which car Cylinder has the highest Length? <br />
 		   <input type="radio" name="answer" value="Correct" /> 8<br />
        	  <input type="radio" name="answer" value="Wrong" /> 9<br />
        	  <input type="radio" name="answer" value="Wrong" /> 12<br />
@@ -136,8 +151,8 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="14">
-	       Following visualization shows the Engine Size for cars with different number of cylinders (e.g., 4 and 6). Which car Cylinder has the highest Engine Size?<br />
+        <div class='question' id="16">
+	       The following chart shows the Engine Size for cars with different number of cylinders (e.g., 4 and 6). Which car Cylinder has the highest Engine Size?<br />
 		  <input type="radio" name="answer" value="Wrong" /> 8<br />
        	  <input type="radio" name="answer" value="Correct" /> 12<br />
        	  <input type="radio" name="answer" value="Wrong" /> 9<br />
@@ -148,18 +163,19 @@
           
       
  
-	     <div class='question' id="15">
-	      Following visualization shows the City Miles Per Gallon for 5 types of cars (e.g., Sedan, and SUV). Which type of car has the highest Highway Miles per Gallon?<br />
+	     <div class='question' id="17">
+	      The following chart shows the City Miles Per Gallon for 5 types of cars (e.g., Sedan, and SUV). Which type of car has the highest Highway Miles per Gallon?<br />
 		  <input type="radio" name="answer" value="Wrong" /> Minivan <br />
        	  <input type="radio" name="answer" value="Correct" /> Wagon<br />
        	  <input type="radio" name="answer" value="Wrong" /> SUV<br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
-		  <div id='vis'> </div>
+		  <div style="width:50%;  display: inline-block;" id='vis'> </div>
+		  <div style="float: right; width:50%; display: inline-block;" id='legend'> </div>
 	    </div>
        
-        <div class='question' id="16">
-	       Following visualization shows the City Miles Per Gallon for 5 types of cars (e.g., Sedan, and SUV). Which type of car has the lowest City Miles per Gallon?<br />
+        <div class='question' id="18">
+	       The following chart shows the City Miles Per Gallon for 5 types of cars (e.g., Sedan, and SUV). Which type of car has the lowest City Miles per Gallon?<br />
 		  <input type="radio" name="answer" value="Wrong" /> Sedan<br />
        	  <input type="radio" name="answer" value="Wrong" /> Minivan <br />
        	  <input type="radio" name="answer" value="Correct" /> SUV<br />
@@ -168,8 +184,8 @@
 		  <div id='vis'> </div>
 	    </div>
 
-	    <div class='question' id="17">
-	      Following visualization shows the Dealer Cost for cars with different Wheel Bases. Which car Wheel Base has the highest Dealer Cost?<br />
+	    <div class='question' id="19">
+	      The following chart shows the Dealer Cost for cars with different Wheel Bases. Which car Wheel Base has the highest Dealer Cost?<br />
 	      <input type="radio" name="answer" value="Wrong" /> 114<br />
        	  <input type="radio" name="answer" value="Wrong" /> 93<br />
        	  <input type="radio" name="answer" value="Correct" /> 122 <br />
@@ -178,8 +194,8 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="18">
-	      Following visualization shows the Engine Size for cars with different Highway Miles Per Gallons (e.g., 39 and 40). Which car Highway Miles per Gallon has the highest Engine Size?<br />
+        <div class='question' id="20">
+	      The following chart shows the Engine Size for cars with different Highway Miles Per Gallons (e.g., 39 and 40). Which car Highway Miles per Gallon has the highest Engine Size?<br />
 		  <input type="radio" name="answer" value="Wrong" /> 25<br />
        	  <input type="radio" name="answer" value="Correct" /> 12<br />
        	  <input type="radio" name="answer" value="Wrong" /> 14<br />
@@ -188,18 +204,19 @@
 		  <div id='vis'> </div>
 	    </div>
         
-	    <div class='question' id="19">
-	      Following visualization shows the Retail Price for cars with different Engine Sizes (e.g., 5.5 and 3). Which car Engine Size has the highest Retail Price?<br />
+	    <div class='question' id="21">
+	      The following chart shows the Retail Price for cars with different Engine Sizes (e.g., 5.5 and 3). Which car Engine Size has the highest Retail Price?<br />
 		  <input type="radio" name="answer" value="Wrong" /> 3.6<br />
        	  <input type="radio" name="answer" value="Correct" /> 5.5<br />
        	  <input type="radio" name="answer" value="Wrong" /> 5<br />
        	  <input type="radio" name="answer" value="Wrong" /> This question cannot be answered using the visualization below.<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
-		  <div id='vis'> </div>
+		  <div style="width:50%;  display: inline-block;" id='vis'> </div>
+		  <div style="float: right; width:50%; display: inline-block;" id='legend'> </div>
 	    </div>
 
-	     <div class='question' id="20">
-	      Following visualization shows the average City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). Which type of car has the lowest City Miles Per Gallon?<br />
+	     <div class='question' id="22">
+	      The following chart shows the average City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). Which type of car has the lowest City Miles Per Gallon?<br />
 		  <input type="radio" name="answer" value="Correct" /> SUV <br />
        	  <input type="radio" name="answer" value="Wrong" />  Sports Car  <br />
        	  <input type="radio" name="answer" value="Wrong" /> Minivan<br />
@@ -208,8 +225,8 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="21">
-       	  Following visualization shows the average Length for 5 types of cars (e.g., Sedan and SUV). Which type of car has the lowest Length?<br />
+        <div class='question' id="23">
+       	  The following chart shows the average Length for 5 types of cars (e.g., Sedan and SUV). Which type of car has the lowest Length?<br />
 		   <input type="radio" name="answer" value="Wrong" /> SUV <br />
        	  <input type="radio" name="answer" value="Correct" />  Sports Car  <br />
        	  <input type="radio" name="answer" value="Wrong" /> Minivan<br />
@@ -218,16 +235,16 @@
 		  <div id='vis'> </div>
 	    </div>
 
-	    <div class='question' id="22">
-	      Following visualization shows the average Horsepower for cars with different width (e.g., 66 and 73). Please select False. <br />
+	    <div class='question' id="24">
+	      The following chart shows the average Horsepower for cars with different width (e.g., 66 and 73). Please select False. <br />
 		  <input type="radio" name="answer" value="Correct" /> False<br />
        	  <input type="radio" name="answer" value="Wrong" /> True<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
 
- 	    <div class='question ranking' id="23">
-	      Following visualization shows the Length for cars with different number of cylinders (e.g., 4 and 6). Suppose you are asked to find a car Cylinder with the highest Length. Rank the below visualizations in the order of preference for performing this task? <b>(1 being the most useful to 5 being least useful) </b><br /><br />
+ 	    <div class='question ranking' id="25">
+	      The following chart shows the Length for cars with different number of cylinders (e.g., 4 and 6). Suppose you are asked to find a car Cylinder with the highest Length. Rank the below charts in the order of preference for performing this task? <b>(1 being the most useful to 5 being least useful) </b><br /><br />
        	  <input type="submit" value="Submit" onclick="showNextQ();" /> <br /><br />
 		  
 		  <div style="margin-bottom: 10px; height:400;">
@@ -289,8 +306,8 @@
 	      </div>
 	    </div>
 
-	    <div class='question ranking' id="24">
-	       All following visualizations show the Dealer cost for cars with different width (e.g., 64, 78). Suppose you are asked to find a car Width with the highest Dealer Cost. Rank the below visualizations in the order of preference for performing this task? <b>(1 being the most useful to 5 being least useful) </b><br /><br />
+	    <div class='question ranking' id="26">
+	       All the following charts show the Dealer cost for cars with different width (e.g., 64, 78). Suppose you are asked to find a car Width with the highest Dealer Cost. Rank the below charts in the order of preference for performing this task? <b>(1 being the most useful to 5 being least useful) </b><br /><br />
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br /><br />
 	     <div style="margin-bottom: 10px; height:400;">
 			    <div style="float: right; width:50%; display: inline-block;" id="vis1">  
@@ -352,8 +369,8 @@
 	      </div>
 	    </div>
 
-		<div class='question ranking' id="25">
-	      Following visualization shows the Highway Miles Per Gallon for 5 types of car. Suppose you are asked to find a type of car with the lowest Highway Miles Per Gallon. Rank the below visualizations in the order of preference for performing this task? <b>(1 being the most useful to 5 being least useful) </b><br /><br />
+		<div class='question ranking' id="27">
+	      The following chart shows the Highway Miles Per Gallon for 5 types of car. Suppose you are asked to find a type of car with the lowest Highway Miles Per Gallon. Rank the below charts in the order of preference for performing this task? <b>(1 being the most useful to 5 being least useful) </b><br /><br />
        	  <input type="submit" value="Submit" onclick="showNextQ(); saveAnswers();" /> <br /><br />
 		  <div style="margin-bottom: 10px; height:400;">
 			    <div style="float: right; width:50%; display: inline-block;" id="vis1">  
@@ -414,7 +431,7 @@
 	            </div>
 	      </div>
 	    </div>
- 	   <div  class="question" id="26">
+ 	   <div  class="question" id="28">
 		  <h3>End of the study </h3> <br />
 		  <p>
 		  Thank you for participating.<br />

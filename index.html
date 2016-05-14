@@ -125,7 +125,7 @@ function saveAnswers()
 mydb.push(obj);
 }
 
-set = "Cluster";
+set = "Derived";
 checker=false;
 function showNextQ(){
 	var prevQ = parseInt($('.question').attr('id')); // get id of the submitting question 
@@ -214,14 +214,14 @@ function showNextQ(){
   <div id="CONTAINER" >
     <div class="question" id="0"> <!-- This is considered as question 0 -->
 
-
-        <h4> NOTE: To ensure best performance, we recommend you run the study in full screen mode. <font color="red">Kindly DO NOT refresh the page during the session.</font> If you wish to restart the study, you should go to XXXXXXXXX. </h4>
         <p>
+        <h3>Purpose of the Study</h3> 
+        <h4>
             The goal of this study is to measure efficiency of different types of charts. 
 
             In this study, you will be asked to complete a set of tasks. For each task, a question is shown on top of the page and a chart below that. Your task is to answer each question by getting help of the given chart. Most of the questions should be answered by selecting one of the multiple options. </br></br>
-
-            <h4>Example</h4>
+       </h4>
+            <h4><span style="color:red;">Example</span></h4>
 
             <embed type="image/png" src="Figures/First.png" width="100%" height:"auto"; align="middle" class="questionImage" />
         </p> 

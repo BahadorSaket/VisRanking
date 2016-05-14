@@ -4,9 +4,13 @@
 
 </head>
 <body>
-
-  	<div class='question' id="1">
-	      Following visualization shows the Highway Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). How much is the Highway Miles Per Gallon for SUV?<br />
+     <div class='question instruction' id="1">
+		      <h3> <font color="red">NOTE:</font> To ensure best performance, we suggest you to run the study in full screen mode. Kindly DO NOT refresh the page during the session. </h3>
+		      During the training session, you will be asked to go through 5 questions. Please try to use the given charts to answer these questions as accurate as possible. Press <b>"Start Training Session"</b> when you are ready to start.<br /><br />
+	       	  <input type="submit" value="Start Training Session" onclick="showNextQ()" /> <br />
+ 	 </div>
+  	<div class='question' id="2">
+	      The following chart shows the Highway Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). How much is the Highway Miles Per Gallon for SUV?<br />
 		  <input type="radio" name="answer" value="trial" /> 29.40<br />
        	  <input type="radio" name="answer" value="trial" /> 1.54<br />
        	  <input type="radio" name="answer" value="trial" /> 27.79<br />
@@ -15,8 +19,8 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="2">
-	      Following visualization shows the Retail Price for cars with different number of Cylinders (e.g., 3 and 4). How much is the Retail Price for Cylinder 12?<br />
+        <div class='question' id="3">
+	      The following chart shows the Retail Price for cars with different number of Cylinders (e.g., 3 and 4). How much is the Retail Price for Cylinder 12?<br />
 		  <input type="radio" name="answer" value="trial" />  37187 <br />
        	  <input type="radio" name="answer" value="trial" />  19110<br />
        	  <input type="radio" name="answer" value="trial" />  127545 <br />
@@ -25,8 +29,8 @@
 		  <div id='vis'> </div>
 	    </div>
 
-	    <div class='question' id="3">
-	      Following visualization shows the Highway Miles Per Gallon for 5 types of cars (e.g., Sedan, and SUV). How much is the Highway Miles Per Gallon for Wagon?  <br />
+	    <div class='question' id="4">
+	      The following chart shows the Highway Miles Per Gallon for 5 types of cars (e.g., Sedan, and SUV). How much is the Highway Miles Per Gallon for Wagon?  <br />
 		  <input type="radio" name="answer" value="trial" /> About 26<br />
        	  <input type="radio" name="answer" value="trial" /> About 32<br />
        	  <input type="radio" name="answer" value="trial" /> About 15<br />
@@ -35,8 +39,8 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="4">
-	       Following visualization shows the Weitght for cars width different Widths (e.g., 60 and 70). How much is the Weight for Width 80?<br />
+        <div class='question' id="5">
+	       The following chart shows the Weitght for cars width different Widths (e.g., 60 and 70). How much is the Weight for Width 80?<br />
 		  <input type="radio" name="answer" value="trial" /> About 4400<br />
        	  <input type="radio" name="answer" value="trial" /> About 4000<br />
        	  <input type="radio" name="answer" value="trial" /> About 4600<br />
@@ -45,8 +49,8 @@
 		  <div id='vis'> </div>
 	    </div>
 
-	    <div class='question' id="5">
-	      Following visualization shows the Highway Miles Per Gallon for cars with different number of cylinders (e.g., 3 and 4). How much is the Highway Miles Per Gallon for Cylinder 6?<br />
+	    <div class='question' id="6">
+	      The following chart shows the Highway Miles Per Gallon for cars with different number of cylinders (e.g., 3 and 4). How much is the Highway Miles Per Gallon for Cylinder 6?<br />
 		  <input type="radio" name="answer" value="trial" /> 12<br />
        	  <input type="radio" name="answer" value="trial" /> 20 <br />
        	  <input type="radio" name="answer" value="trial" /> 35 <br />
@@ -55,8 +59,14 @@
 		  <div id='vis'> </div>
 	    </div>
 
-	    <div class='question' id="6">
-	      Following visualization shows the City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). How much is the City Miles Per Gallon for Wagon?<br />
+	     <div class='question instruction' id="7">
+	       <p>Thank You. You completed the Trial Session.</p>  
+	        Now is the time to start the main experiment. Similar to the trial session, in the main experiment you will be asked to complete about 20 questions. However, in the main experiment after answering each question and pressing the "Submit" button you cannot edit your answer. You will not receive any feedback to show you correct or wrong answers during this session. So, please answer the questions <b>as accurate as possible</b> and press "Submit" button only when you are sure about your answer. Press <b>"Start"</b> when you are ready to start the main experiment.<br /><br />
+       	  <input type="submit" value="Start" onclick="showNextQ()" /> <br />
+	    </div>
+
+	    <div class='question' id="8">
+	      The following chart shows the City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). How much is the City Miles Per Gallon for Wagon?<br />
 		  <input type="radio" name="answer" value="Correct" /> About 52<br />
        	  <input type="radio" name="answer" value="Wrong" /> About 25<br />
        	  <input type="radio" name="answer" value="Wrong" /> About 20<br />
@@ -65,8 +75,8 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="7">
-	      Following visualization shows the Weight for cars with different number of cylinders (e.g., 3 and 4). How much is the Weight for Cylinder 3?
+        <div class='question' id="9">
+	      The following chart shows the Weight for cars with different number of cylinders (e.g., 3 and 4). How much is the Weight for Cylinder 3?
 	       <br />
 		   <input type="radio" name="answer" value="Wrong" /> 3450 <br />
        	  <input type="radio" name="answer" value="Wrong" /> 4451<br />
@@ -76,8 +86,8 @@
 		  <div id='vis'> </div>
 	    </div>
 
-	    <div class='question' id="8">
-	      Following visualization shows the City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). How much is the City Miles Per Gallon for Sports Car?<br />
+	    <div class='question' id="10">
+	      The following chart shows the City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). How much is the City Miles Per Gallon for Sports Car?<br />
 		  <input type="radio" name="answer" value="Correct" /> About 19<br />
        	  <input type="radio" name="answer" value="Wrong" /> About 30 <br />
        	  <input type="radio" name="answer" value="Wrong" /> About 55 <br />
@@ -86,8 +96,8 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="9">
-	      Following visualization shows the Dealer Cost Per Gallon for cars width different Wheel Base (e.g., 60 and 70). How much is the Dealer Cost for Wheel Base 100?<br />
+        <div class='question' id="11">
+	      The following chart shows the Dealer Cost Per Gallon for cars width different Wheel Base (e.g., 60 and 70). How much is the Dealer Cost for Wheel Base 100?<br />
 		  <input type="radio" name="answer" value="Wrong" /> About 21000 <br />
        	  <input type="radio" name="answer" value="Correct" /> About 30000<br />
        	  <input type="radio" name="answer" value="Wrong" /> About 35000<br />
@@ -96,8 +106,8 @@
 		  <div id='vis'> </div>
 	    </div>
     
-	     <div class='question' id="10">
-	      Following visualization shows the Engine Size for cars with different number of cylinders (e.g., 4 and 6). How much is the Engine Size for Cylinder 6?<br />
+	     <div class='question' id="12">
+	      The following chart shows the Engine Size for cars with different number of cylinders (e.g., 4 and 6). How much is the Engine Size for Cylinder 6?<br />
 		  <input type="radio" name="answer" value="Wrong" /> About 5<br />
        	  <input type="radio" name="answer" value="Wrong" /> About 4<br />
        	  <input type="radio" name="answer" value="Correct" /> About 3 <br />
@@ -106,16 +116,16 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="11">
-	      Following visualization shows the Dealer Cost for cars with different number of cylinders (e.g., 3 and 4). Please select True. <br />
+        <div class='question' id="13">
+	      The following chart shows the Dealer Cost for cars with different number of cylinders (e.g., 3 and 4). Please select True. <br />
 		  <input type="radio" name="answer" value="Wrong" /> False<br />
        	  <input type="radio" name="answer" value="Correct" /> True<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
 
-        <div class='question' id="12">
-	      Following visualization shows the Horsepower for cars with different number of Widths. How much is the Horsepower for Width 70?<br />
+        <div class='question' id="14">
+	      The following chart shows the Horsepower for cars with different number of Widths. How much is the Horsepower for Width 70?<br />
 		  <input type="radio" name="answer" value="Correct" /> Between 220 and 240<br />
        	  <input type="radio" name="answer" value="Wrong" /> Between 200 and 210<br />
        	  <input type="radio" name="answer" value="Wrong" /> Between 250 and 260 <br />
@@ -124,8 +134,8 @@
 		  <div id='vis'> </div>
 	    </div>
 
-	    <div class='question' id="13">
-	      Following visualization shows the City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). How much is the City Miles Per Gallon for SUV?<br />
+	    <div class='question' id="15">
+	      The following chart shows the City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). How much is the City Miles Per Gallon for SUV?<br />
 		    <input type="radio" name="answer" value="Correct" /> 16<br />
        	  <input type="radio" name="answer" value="Wrong" /> 21 <br />
        	  <input type="radio" name="answer" value="Wrong" /> 54<br />
@@ -134,8 +144,8 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="14">
-	       Following visualization shows the City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). How much is the City Miles Per Gallon for Minivan?<br />
+        <div class='question' id="16">
+	       The following chart shows the City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). How much is the City Miles Per Gallon for Minivan?<br />
 		  <input type="radio" name="answer" value="Wrong" /> 21.80 <br />
        	  <input type="radio" name="answer" value="Wrong" /> 18.62<br />
        	  <input type="radio" name="answer" value="Correct" /> 17.90<br />
@@ -144,8 +154,8 @@
 		  <div id='vis'> </div>
 	    </div>
           
-	     <div class='question' id="15">
-	      Following visualization shows the Dealer Cost Per Gallon for cars width different Wheel Base (e.g., 60 and 70). How much is the Dealer Cost for Wheel Base 120? <br />
+	     <div class='question' id="17">
+	      The following chart shows the Dealer Cost Per Gallon for cars width different Wheel Base (e.g., 60 and 70). How much is the Dealer Cost for Wheel Base 120? <br />
 		  <input type="radio" name="answer" value="Wrong" /> 26129<br />
        	  <input type="radio" name="answer" value="Correct" /> 26120<br />
        	  <input type="radio" name="answer" value="Wrong" /> 38978<br />
@@ -154,8 +164,8 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="16">
-	       Following visualization shows the Dealer Cost for cars with different number of cylinders (e.g., 3 and 4). How much is the Dealer Cost for Cylinder 8?<br />
+        <div class='question' id="18">
+	       The following chart shows the Dealer Cost for cars with different number of cylinders (e.g., 3 and 4). How much is the Dealer Cost for Cylinder 8?<br />
 		  <input type="radio" name="answer" value="Wrong" /> About 60000<br />
        	  <input type="radio" name="answer" value="Correct" /> About 50000 <br />
        	  <input type="radio" name="answer" value="Wrong" /> About 34000 <br />
@@ -164,8 +174,8 @@
 		  <div id='vis'> </div>
 	    </div>
 
-	    <div class='question' id="17">
-	      Following visualization shows the Engine Size for cars with different number of cylinders (e.g., 3 and 4). How much is the Engine Size for Cylinder 9? <br />
+	    <div class='question' id="19">
+	      The following chart shows the Engine Size for cars with different number of cylinders (e.g., 3 and 4). How much is the Engine Size for Cylinder 9? <br />
 		  <input type="radio" name="answer" value="Wrong" />  2.00<br />
        	  <input type="radio" name="answer" value="Wrong" />  3.24 <br />
        	  <input type="radio" name="answer" value="Correct" /> 3.20<br />
@@ -174,8 +184,8 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="18">
-	      Following visualization shows the Engine Size for cars with different width (e.g., 66 and 73). How much is the Engine Size for Width 78?<br />
+        <div class='question' id="20">
+	      The following chart shows the Engine Size for cars with different width (e.g., 66 and 73). How much is the Engine Size for Width 78?<br />
 		  <input type="radio" name="answer" value="Wrong" /> About 2.5<br />
        	  <input type="radio" name="answer" value="Correct" /> About 4.3 <br />
        	  <input type="radio" name="answer" value="Wrong" /> About 6<br />
@@ -184,8 +194,8 @@
 		  <div id='vis'> </div>
 	    </div>
         
-	    <div class='question' id="19">
-	      Following visualization shows the Retail Price for cars with different Wheel Base sizes (e.g., 123 and 130). How much is the Retail Price for Wheel Base 129?<br />
+	    <div class='question' id="21">
+	      The following chart shows the Retail Price for cars with different Wheel Base sizes (e.g., 123 and 130). How much is the Retail Price for Wheel Base 129?<br />
 		  <input type="radio" name="answer" value="Wrong" /> 44500<br />
        	  <input type="radio" name="answer" value="Wrong" /> 34000<br />
        	  <input type="radio" name="answer" value="Wrong" /> 13000<br />
@@ -194,8 +204,8 @@
 		  <div id='vis'> </div>
 	    </div>
 
-	     <div class='question' id="20">
-	      Following visualization shows the City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). How much is the City Miles Per Gallon for Sedan?<br />
+	     <div class='question' id="22">
+	      The following chart shows the City Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). How much is the City Miles Per Gallon for Sedan?<br />
 		  <input type="radio" name="answer" value="Wrong" /> About 23<br />
        	  <input type="radio" name="answer" value="Correct" /> About 30<br />
        	  <input type="radio" name="answer" value="Wrong" /> About 17<br />
@@ -204,8 +214,8 @@
 		  <div id='vis'> </div>
 	    </div>
        
-        <div class='question' id="21">
-	       Following visualization shows the Horsepower for cars with different number of cylinders (e.g., 3 and 4). How much is the Horsepower for Cylinder 4?
+        <div class='question' id="23">
+	       The following chart shows the Horsepower for cars with different number of cylinders (e.g., 3 and 4). How much is the Horsepower for Cylinder 4?
 	       <br />
 		   <input type="radio" name="answer" value="Wrong" /> About 200<br />
        	  <input type="radio" name="answer" value="Wrong" /> About 100<br />
@@ -215,16 +225,16 @@
 		  <div id='vis'> </div>
 	    </div>
 
-	    <div class='question' id="22">
-	      Following visualization shows the Horsepower for cars with different width (e.g., 66 and 73). Please select False. <br />
+	    <div class='question' id="24">
+	      The following chart shows the Horsepower for cars with different width (e.g., 66 and 73). Please select False. <br />
 		  <input type="radio" name="answer" value="Correct" /> False<br />
        	  <input type="radio" name="answer" value="Wrong" /> True<br/><br/>
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br />
 		  <div id='vis'> </div>
 	    </div>
 
- 	    <div class='question ranking' id="23">
-	      All following visualizations show the Highway Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). Suppose you are asked to find the value of Highway Miles Per Gallon for a specific car type. Rank the below visualizations in the order of preference for performing this task? <b>(1 being the most useful to 5 being least useful) </b><br /><br />
+ 	    <div class='question ranking' id="25">
+	      All the following charts show the Highway Miles Per Gallon for 5 types of cars (e.g., Sedan and SUV). Suppose you are asked to find the value of Highway Miles Per Gallon for a specific car type. Rank the below charts in the order of preference for performing this task? <b>(1 being the most useful to 5 being least useful) </b><br /><br />
        	  <input type="submit" value="Submit" onclick="showNextQ();"/> <br /><br />
 		  
 		  <div style="margin-bottom: 10px; height:400;">
@@ -286,8 +296,8 @@
 	      </div>
 	    </div>
 
-	    <div class='question ranking' id="24">
-	      All following visualizations show the Length for 8 types of cylinders (e.g., 3, 4). Suppose you are asked to find the Length of specific Cylinder. Rank the below visualizations in the order of preference for performing this task? <b>(1 being the most useful to 5 being least useful) </b><br /><br />
+	    <div class='question ranking' id="26">
+	      All the following charts show the Length for 8 types of cylinders (e.g., 3, 4). Suppose you are asked to find the Length of specific Cylinder. Rank the below charts in the order of preference for performing this task? <b>(1 being the most useful to 5 being least useful) </b><br /><br />
        	  <input type="submit" value="Submit" onclick="showNextQ()" /> <br /><br />
 	     <div style="margin-bottom: 10px; height:400;">
 			    <div style="float: right; width:50%; display: inline-block;" id="vis1">  
@@ -349,8 +359,8 @@
 	      </div>
 	    </div>
 
-		<div class='question ranking' id="25">
-	      All following visualizations show the Dealer cost for cars with different width size (e.g., 10, 20). Suppose you are asked to find the Dealer Cost for a specific Width. Rank the below visualizations in the order of preference for performing this task? <b>(1 being the most useful to 5 being least useful) </b><br /><br />
+		<div class='question ranking' id="27">
+	      All the following charts show the Dealer cost for cars with different width size (e.g., 10, 20). Suppose you are asked to find the Dealer Cost for a specific Width. Rank the below charts in the order of preference for performing this task? <b>(1 being the most useful to 5 being least useful) </b><br /><br />
        	  <input type="submit" value="Submit" onclick="showNextQ(); saveAnswers();" /> <br /><br />
 		  <div style="margin-bottom: 10px; height:400;">
 			    <div style="float: right; width:50%; display: inline-block;" id="vis1">  
@@ -411,7 +421,7 @@
 	            </div>
 	      </div>
 	    </div>
-	   <div  class="question" id="26">
+	   <div  class="question" id="28">
 		  <h3>End of the study </h3> <br />
 		  <p>
 		  Thank you for participating.<br />
