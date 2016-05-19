@@ -445,7 +445,7 @@
 		        }
 		        if(currentQ == 21){
 		        	questionID = "PieChart_Derived_Numerical_Numerical";
-		        	dataVisualizer.drawPieChart(data,"Engine Size (l)","Retail Price","#vis",1000,600);
+		        	dataVisualizer.drawPieChart(data,"Width","Retail Price","#vis",1000,600);
 		        }
 		        if(currentQ ==22){
 		          	questionID = "LineChart_Derived_Nominal_Numerical";
@@ -572,7 +572,7 @@
 	          
 		        if(currentQ == 21){
 		        	questionID = "PieChart_Distribution_Numerical_Numerical";
-		        	dataVisualizer.drawPieChart(data,"Wheel Base","Retail Price","#vis",1000,600);
+		        	dataVisualizer.drawPieChart(data,"Width","Retail Price","#vis",1000,600);
 		        }
 		         if(currentQ ==22){
 		         	questionID = "LineChart_Distribution_Nominal_Numerical";
@@ -703,7 +703,7 @@
 	          
 		        if(currentQ == 21){
 		        	questionID = "PieChart_Extremum_Numerical_Numerical";
-		        	dataVisualizer.drawPieChart(data,"Engine Size (l)","Retail Price","#vis",1000,600);
+		        	dataVisualizer.drawPieChart(data,"Width","Retail Price","#vis",1000,600);
 		        }
 		         if(currentQ ==22){
 		         	questionID = "LineChart_Extremum_Nominal_Numerical";
@@ -832,7 +832,7 @@
 	          
 		        if(currentQ == 21){
 		        	questionID = "PieChart_Filter_Numerical_Numerical";
-		        	dataVisualizer.drawPieChart(data,"Wheel Base","Retail Price","#vis",1000,600);
+		        	dataVisualizer.drawPieChart(data,"Width","Retail Price","#vis",1000,600);
 		        }
 		         if(currentQ ==22){
 		         	questionID = "LineChart_Filter_Nominal_Numerical";
@@ -1089,7 +1089,7 @@
 	          
 		        if(currentQ == 21){
 		        	questionID = "PieChart_Range_Numerical_Numerical";
-		        	dataVisualizer.drawPieChart(data,"Engine Size (l)","Retail Price","#vis",1000,600);
+		        	dataVisualizer.drawPieChart(data,"Width","Retail Price","#vis",1000,600);
 		        }
 		         if(currentQ ==22){
 		         	questionID = "LineChart_Range_Nominal_Numerical";
@@ -1217,7 +1217,7 @@
 	          
 		        if(currentQ == 21){
 		        	questionID = "PieChart_Retrieve_Numerical_Numerical";
-		        	dataVisualizer.drawPieChart(data,"Wheel Base","Retail Price","#vis",1000,600);
+		        	dataVisualizer.drawPieChart(data,"Width","Retail Price","#vis",1000,600);
 		        }
 		         if(currentQ ==22){
 		         	questionID = "LineChart_Retrieve_Nominal_Numerical";

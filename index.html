@@ -59,9 +59,9 @@ ref.once("value", function(snapshot) {
   //console.log(sets);
 });
 
-//  setTimeout(continueExecution, 2500) //wait ten seconds before continuing
+  setTimeout(continueExecution, 2500) //wait ten seconds before continuing
 
-/*
+
 function continueExecution()
 {
     max_val = -Infinity;
@@ -77,7 +77,7 @@ function continueExecution()
     set = max_label;
 
 }
-*/ 
+
 
 
 function callQuestions(currentQ,set)
@@ -115,17 +115,17 @@ function saveAnswers()
     var timestamp = new Date().getTime();
     var mydb = new Firebase("https://intense-torch-1450.firebaseio.com/");
    // console.log(stream0, stream1);
-   var obj = {
-    userid: Math.ceil(timestamp),
-    bio: stream0,
-    time: stream2.slice(0, -1),
-    accuracy: stream1.slice(0, -1),
-    ranking: stream3.slice(0, -1)
-}
-mydb.push(obj);
+    var obj = {
+        userid: Math.ceil(timestamp),
+        bio: stream0,
+        time: stream2.slice(0, -1),
+        accuracy: stream1.slice(0, -1),
+        ranking: stream3.slice(0, -1)
+    }
+    mydb.push(obj);
 }
 
-set = "Order";
+//set = "Distribution";
 checker=false;
 function showNextQ(){
 	var prevQ = parseInt($('.question').attr('id')); // get id of the submitting question 
@@ -215,7 +215,7 @@ function showNextQ(){
     <div class="question" id="0"> <!-- This is considered as question 0 -->
 
         <p>
-        <h3>Purpose of the Study</h3> 
+        <h3>Answer Chart Questions</h3> 
         <h4>
             The goal of this study is to measure efficiency of different types of charts. 
 
@@ -261,6 +261,8 @@ function showNextQ(){
         <input type="checkbox" name="tool" value="Spotfire"> Spotfire </br>
         <input type="checkbox" name="tool" value="D3"> D3</br>
         <input type="checkbox" name="tool" value="Processing"> Processing</br>
+        <input type="checkbox" name="tool" value="Processing"> Processing</br>
+
     </td>
 </tr> </br>
 
