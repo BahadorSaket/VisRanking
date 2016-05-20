@@ -59,25 +59,27 @@ ref.once("value", function(snapshot) {
   //console.log(sets);
 });
 
-  setTimeout(continueExecution, 2500) //wait ten seconds before continuing
+
+//   setTimeout(continueExecution, 2500) //wait ten seconds before continuing
 
 
-function continueExecution()
-{
-    max_val = -Infinity;
-    max_label="";
-    var x;
-    for( x in sets) {
-        if( sets[x] > max_val) 
-        {
-            max_val = sets[x];
-            max_label = x;
-        }
-    }
-    set = max_label;
+// function continueExecution()
+// {
+//     max_val = -Infinity;
+//     max_label="";
+//     var x;
+//     for( x in sets) {
+//         if( sets[x] > max_val) 
+//         {
+//             max_val = sets[x];
+//             max_label = x;
+//         }
+//     }
+//     set = max_label;
 
-}
+// }
 
+set ="Anomalies";
 
 
 function callQuestions(currentQ,set)
@@ -98,14 +100,30 @@ function bindEvent(){
             $('#Answer').css("font-weight","bold");
         }
         else if (this.value == 'Wrong') {
-            $("#Answer").text("Your answer is wrong. Please try it again.");
+            $("#Answer").text("Your answer is incorrect. Please try it again.");
             $("#Answer").css('color', 'red');
             $('#Answer').css("font-weight","bold");
-        }
-        
+        }        
       
     });
 }
+
+
+$(function() {
+    $('input[type=checkbox][name=other]').change(function() {
+        if(this.checked) {
+            $('.others').empty();
+            text="Ohter"
+            $('.others').append('<input type="text" /> ' + '<br />');
+
+        }
+        else
+        {
+            $('.others').empty();
+        }
+    })
+})
+
 
 function saveAnswers()
 {
@@ -215,12 +233,10 @@ function showNextQ(){
     <div class="question" id="0"> <!-- This is considered as question 0 -->
 
         <p>
-        <h3>Answer Chart Questions</h3> 
-        <h4>
-            The goal of this study is to measure efficiency of different types of charts. 
-
-            In this study, you will be asked to complete a set of tasks. For each task, a question is shown on top of the page and a chart below that. Your task is to answer each question by getting help from the given chart. Most of the questions should be answered by selecting one of the multiple options. </br></br>
-       </h4>
+        <h2 style="text-align:center;" >Answer Chart Questions</h2> 
+        <span style="font-size:130%;">
+            The goal of this study is to measure the effectiveness of different types of charts. In a series of tasks, we will show you a question and a chart (see the example below). Your job is to answer the question by using the given chart.  </br></br>
+       </span>
             <h4><span style="color:red;">Example</span></h4>
 
             <embed type="image/png" src="Figures/First.png" width="100%" height:"auto"; align="middle" class="questionImage" />
@@ -261,8 +277,10 @@ function showNextQ(){
         <input type="checkbox" name="tool" value="Spotfire"> Spotfire </br>
         <input type="checkbox" name="tool" value="D3"> D3</br>
         <input type="checkbox" name="tool" value="Processing"> Processing</br>
-        <input type="checkbox" name="tool" value="Processing"> Processing</br>
-
+        <input type="checkbox" name="other" value="Other"> Other</br>
+        <form class="others">
+        </form>
+     
     </td>
 </tr> </br>
 
