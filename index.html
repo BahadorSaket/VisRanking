@@ -32,6 +32,7 @@ dataProcessor.processFile("data/cars.csv");
 
 
 // init
+/*
 function init(){
 var mydb = new Firebase("https://intense-torch-1450.firebaseio.com/");
 var sets = {
@@ -146,6 +147,8 @@ function continueExecution()
 
 }
 
+*/
+
 function getSurCode(){
 	$('#sur_btn').hide();
 	$('#sur_code').text(timestamp);
@@ -153,7 +156,7 @@ function getSurCode(){
 }
 
 var timestamp="";
-//var set = "Order";
+var set = "Order";
 function saveAnswers()
 {
 	//sets[max_label] = max_val-1;
@@ -173,12 +176,60 @@ function saveAnswers()
 	mydb.push(obj);
 }
 
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length; i; i -= 1) {
+        j = Math.floor(Math.random() * i);
+        x = a[i - 1];
+        a[i - 1] = a[j];
+        a[j] = x;
+    }
+}
+
+
+// Short Set
+var shortSet = new Array(23);
+for(var i=0; i<shortSet.length; i++){
+	shortSet[i] = i;
+}
+var shortSlice = shortSet.slice(8, 19);
+shuffle(shortSlice);
+Array.prototype.splice.apply(shortSet, [8, shortSlice.length].concat(shortSlice));
+console.log(shortSet);
+
+// Long set
+var longSet = new Array(30);
+for(var i=0; i<longSet.length; i++){
+	longSet[i] = i;
+}
+var longSlice = longSet.slice(8, 25);
+shuffle(longSlice);
+Array.prototype.splice.apply(longSet, [8, longSlice.length].concat(longSlice));
+console.log(longSet);
+
 function callQuestions(currentQ,set)
 {
-	$("#CONTAINER").load("Questions/"+set+".html #" + currentQ, function() {
-		updateChart(currentQ,set);
-		if(currentQ <= 6)
-		bindEvent();
+	var totalq;
+	var list;
+	if(set == "Correlation"){ // SHORT
+		totalq = 13;
+		list = shortSet;
+	} else { // LONG
+		totalq = 20;
+		list = longSet;
+	}
+	$("#CONTAINER").load("Questions/"+set+".html #" + list[currentQ], function() {
+		var span;
+		if(currentQ<=7 || $('#'+ list[currentQ]).hasClass('comment') || $('#'+ list[currentQ]).hasClass('end')){
+			span = '<span class="indexKeeper" id="'+ currentQ +'"></span>';
+		} else {
+			span = '<span class="indexKeeper" id="'+ currentQ +'">'+ '(' + parseInt(currentQ-7) + ' / ' + totalq + ') - ' +'</span>';
+		}
+		$('#'+ list[currentQ]).prepend(span);
+		console.log(currentQ);
+		updateChart(list[currentQ],set);
+		if(list[currentQ] <= 6)
+			bindEvent();
 	});
 }
 
@@ -221,7 +272,7 @@ $(function() {
 
 checker=false;
 function showNextQ(){
-	var prevQ = parseInt($('.question').attr('id')); // get id of the submitting question
+	var prevQ = parseInt($('.indexKeeper').attr('id')); // get id of the submitting question
 	var currentQ = prevQ + 1;
 
 
@@ -312,7 +363,7 @@ function showNextQ(){
 
 	<div id="CONTAINER" >
 		<div class="question" id="0"> <!-- This is considered as question 0 -->
-
+			<span class="indexKeeper" id="0"></span>
 			<p>
 				<h2 style="text-align:center;" >Answer Chart Questions</h2>
 				<span style="font-size:130%;">
