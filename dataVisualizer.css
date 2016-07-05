@@ -30,14 +30,14 @@
 .slice text {
             font-size: 16pt;
             font-family: Arial;
-        }   
+        }
 
  .question {
     margin-left: auto;
     margin-right: auto;
     width:90%; /*   WIDTH OF QUESTIONS' CONTAINER, IMAGES WILL FIT TO THIS CONTAINER AS WELL  */
     height:auto;
-            
+
     border: 1px solid #ccc;
     padding: 5px 5px 30px 5px;
     background-color: #f3f3f3;
