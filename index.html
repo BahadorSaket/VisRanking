@@ -337,6 +337,17 @@ function showNextQ(){
 		}
 		else if($("#"+prevQ).hasClass("ranking")==true)
 		{
+			// Validate the ranks
+			var visRanks = [-1,0,0,0,0,0]; // first element is not used
+			for(var vi=1; vi<=5; vi++){
+				visRanks[parseInt($("#vis"+vi).children("select").val())]++;
+			}
+			for(var rank=1; rank<=5; rank++){
+				if(visRanks[rank]!=1){
+					alert("Please make sure each visualization is given a unique rank.");
+					return false;
+				}
+			}
 			stream3 += questionID + ",";
 			stream3 += $("#vis1").children("p").text().toString() + "_"+ $("#vis1").children("select").val().toString() +",";
 			stream3 += $("#vis2").children("p").text().toString() + "_"+ $("#vis2").children("select").val().toString() +",";
